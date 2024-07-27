@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Solver</title>
+    <link rel="stylesheet" href="wordleSolver.css">
+    <style></style>
+  </head>
+  <body>
+    <main>
+      <h1>Wordle Solver</h1>   
+      <div class="box1">
+          <label>What letters have you got in place so far?</label>
+          <div class="box11">
+            <label title=""></label>
+            <input id="inputLetterOne" class="i1 inputLetterOne" type="text" maxlength="1" pattern="[A-Za-z]" title="Only a-zA-Z" autofocus oninput="focusOnTwo()">
+            <input id="inputLetterTwo" class="i1 inputLetterTwo" type="text" maxlength="1" pattern="[A-Za-z]" title="Only a-zA-Z" oninput="focusOnThree()">
+            <input id="inputLetterThree" class="i1 inputLetterThree" type="text" maxlength="1" pattern="[A-Za-z]" title="Only a-zA-Z" oninput="focusOnFour()">
+            <input id="inputLetterFour" class="i1 inputLetterFour" type="text" maxlength="1" pattern="[A-Za-z]" title="Only a-zA-Z" oninput="focusOnFive()">
+            <input id="inputLetterFive" class="i1 inputLetterFive" type="text" maxlength="1" pattern="[A-Za-z]" title="Only a-zA-Z" oninput="focusOnLettersOut()">
+          </div>
+          <label>What letters are already out?</label>
+          <input id="inputLetters" class="inputLetters" type="text" maxlength="15" pattern="[A-Za-z]" title="Only a-zA-Z" onchange="f1()">
+      </div>
+      <div class="box2">
+        <button id="btn" class="btn" type="button">Find words</button>
+        <button id="clearBtn" class="clearBtn">Clear</button>
+      </div>
+      <div class="box3" id="box3">
+        <label>These are the possible words:</label>
+        <div class="box31">
+          <p id="infoLetters"></p>
+          <p id="infoLength1">Found:  </p>
+          <p id="infoLength2"></p>
+        </div>
+        <p id="result"></p>
+      </div>
+    </main>
+  <script src="wordList.js"></script>
+  </body>
+<!--© Created by Sandor Nagy-->
+</html>
