@@ -112,9 +112,26 @@ h2 {
   }
   .social-links {
     display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-    margin: 50px auto;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .social-link-batch {
+    display: flex;
+    width: 300px;
+  }
+  .social-link-batch a {
+    padding: 20px 10px;
+    width: 150px;
+  }
+  @media only screen and (max-width: 599px) {
+    .social-links {
+      display: inline-block;
+      margin: 50px;
+    }
+    .social-link-batch {
+      width: 300px;
+      margin: 0 auto;
+    }
   }
   i {
     padding: 0 5px;
