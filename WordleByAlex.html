@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wordle Solver</title>
+        <link rel="stylesheet" href="wordleByAlex.css">
+        <style></style>
+    </head>
+    <body>
+        <div id="game-ui">
+            <div id="input-area">
+                <h5 id="score">
+                    Won: <strong><span id="wonScore">0</span></strong>
+                    streak: <strong><span id="streakScore">0</span></strong>
+                    Lost: <strong><span id="lostScore">0</span></strong>
+                </h5>
+                <h6>Stats:  _<span id="stat1">0</span>__<span id="stat2">0</span>__<span id="stat3"> 0</span>__<span id="stat4"> 0</span>__<span id="stat5"> 0</span>__<span id="stat6"> 0</span>_</h6>
+                <h1>Wordle</h1>
+                <div id="attempt-one-area">
+                    <input id="input11" type="text" maxlength="1" autofocus  oninput="focusOnNext(letter12, this.value)" value="" />
+                    <input id="input12" type="text" maxlength="1" oninput="focusOnNext(letter13, this.value)" value="" onkeydown="focusOnPrev(event, letter11, this.value)" />
+                    <input id="input13" type="text" maxlength="1" oninput="focusOnNext(letter14, this.value)" value="" onkeydown="focusOnPrev(event, letter12, this.value)" />
+                    <input id="input14" type="text" maxlength="1" oninput="focusOnNext(letter15, this.value)" value="" onkeydown="focusOnPrev(event, letter13, this.value)" />
+                    <input id="input15" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter14, this.value)" />
+                </div>
+                <div id="attempt-two-area">
+                    <input id="input21" type="text" maxlength="1" oninput="focusOnNext(letter22, this.value)" value="" disabled />
+                    <input id="input22" type="text" maxlength="1" oninput="focusOnNext(letter23, this.value)" value="" onkeydown="focusOnPrev(event, letter21, this.value)" disabled />
+                    <input id="input23" type="text" maxlength="1" oninput="focusOnNext(letter24, this.value)" value="" onkeydown="focusOnPrev(event, letter22, this.value)" disabled />
+                    <input id="input24" type="text" maxlength="1" oninput="focusOnNext(letter25, this.value)" value="" onkeydown="focusOnPrev(event, letter23, this.value)" disabled />
+                    <input id="input25" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter24, this.value)" disabled />
+                </div>
+                <div id="attempt-three-area">
+                    <input id="input31" type="text" maxlength="1" oninput="focusOnNext(letter32, this.value)" value="" disabled />
+                    <input id="input32" type="text" maxlength="1" oninput="focusOnNext(letter33, this.value)" value="" onkeydown="focusOnPrev(event, letter31, this.value)" disabled />
+                    <input id="input33" type="text" maxlength="1" oninput="focusOnNext(letter34, this.value)" value="" onkeydown="focusOnPrev(event, letter32, this.value)" disabled />
+                    <input id="input34" type="text" maxlength="1" oninput="focusOnNext(letter35, this.value)" value="" onkeydown="focusOnPrev(event, letter33, this.value)" disabled />
+                    <input id="input35" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter34, this.value)" disabled />
+                </div>
+                <div id="attempt-four-area">
+                    <input id="input41" type="text" maxlength="1" oninput="focusOnNext(letter42, this.value)" value="" disabled />
+                    <input id="input42" type="text" maxlength="1" oninput="focusOnNext(letter43, this.value)" value="" onkeydown="focusOnPrev(event, letter41, this.value)" disabled />
+                    <input id="input43" type="text" maxlength="1" oninput="focusOnNext(letter44, this.value)" value="" onkeydown="focusOnPrev(event, letter42, this.value)" disabled />
+                    <input id="input44" type="text" maxlength="1" oninput="focusOnNext(letter45, this.value)" value="" onkeydown="focusOnPrev(event, letter43, this.value)" disabled />
+                    <input id="input45" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter44, this.value)" disabled />
+                </div>
+                <div id="attempt-five-area">
+                    <input id="input51" type="text" maxlength="1" oninput="focusOnNext(letter52, this.value)" value="" disabled />
+                    <input id="input52" type="text" maxlength="1" oninput="focusOnNext(letter53, this.value)" value="" onkeydown="focusOnPrev(event, letter51, this.value)" disabled />
+                    <input id="input53" type="text" maxlength="1" oninput="focusOnNext(letter54, this.value)" value="" onkeydown="focusOnPrev(event, letter52, this.value)" disabled />
+                    <input id="input54" type="text" maxlength="1" oninput="focusOnNext(letter55, this.value)" value="" onkeydown="focusOnPrev(event, letter53, this.value)" disabled />
+                    <input id="input55" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter54, this.value)" disabled />
+                </div>
+                <div id="attempt-six-area">
+                    <input id="input61" type="text" maxlength="1" oninput="focusOnNext(letter62, this.value)" value="" disabled />
+                    <input id="input62" type="text" maxlength="1" oninput="focusOnNext(letter63, this.value)" value="" onkeydown="focusOnPrev(event, letter61, this.value)" disabled />
+                    <input id="input63" type="text" maxlength="1" oninput="focusOnNext(letter64, this.value)" value="" onkeydown="focusOnPrev(event, letter62, this.value)" disabled />
+                    <input id="input64" type="text" maxlength="1" oninput="focusOnNext(letter65, this.value)" value="" onkeydown="focusOnPrev(event, letter63, this.value)" disabled />
+                    <input id="input65" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter64, this.value)" disabled />
+                </div>
+            </div>
+            <h1 id="congrats"></h1>
+            <div id="submitdiv">
+                <button id="submit" onclick="checkAnswer()" disabled >SUBMIT</button>
+                <button id="playAgain" onclick="playAgain()">PLAY AGAIN</button>
+            </div>
+            <div id="letter-btn-area">
+                <div id="btns-line-one">
+                    <div class="letters" id="Q" value="Q">Q</div>
+                    <div class="letters" id="W" value="W">W</div>
+                    <div class="letters" id="E" value="E">E</div>
+                    <div class="letters" id="R" value="R">R</div>
+                    <div class="letters" id="T" value="T">T</div>
+                    <div class="letters" id="Y" value="Y">Y</div>
+                    <div class="letters" id="U" value="U">U</div>
+                    <div class="letters" id="I" value="I">I</div>
+                    <div class="letters" id="O" value="O">O</div>
+                    <div class="letters" id="P" value="P">P</div>
+                </div>
+                <div id="btns-line-two">
+                    <div class="letters" id="A" value="A">A</div>
+                    <div class="letters" id="S" value="S">S</div>
+                    <div class="letters" id="D" value="D">D</div>
+                    <div class="letters" id="F" value="F">F</div>
+                    <div class="letters" id="G" value="G">G</div>
+                    <div class="letters" id="H" value="H">H</div>
+                    <div class="letters" id="J" value="J">J</div>
+                    <div class="letters" id="K" value="K">K</div>
+                    <div class="letters" id="L" value="L">L</div>
+                </div>
+                <div id="btns-line-three">
+                    <div class="letters" id="Z" value="Z">Z</div>
+                    <div class="letters" id="X" value="X">X</div>
+                    <div class="letters" id="C" value="C">C</div>
+                    <div class="letters" id="V" value="V">V</div>
+                    <div class="letters" id="B" value="B">B</div>
+                    <div class="letters" id="N" value="N">N</div>
+                    <div class="letters" id="M" value="M">M</div>
+                </div>
+            </div>
+        </div>
+        <div id="divider"></div>
+        <div>
+            <p>Created by <a href="https://sandornagygh.github.io/">Alex Sandor Nagy</a></p>
+        </div>
+        
+        <script src="wordleByAlex.js"></script>
+    </body>
+    <!--© Created by Sandor Nagy-->
+</html>
