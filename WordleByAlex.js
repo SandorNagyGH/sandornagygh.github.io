@@ -141,4 +141,6 @@ function playAgain(){
     document.getElementById("submit").style.display="block";
     document.getElementById("playAgain").style.display="none";
     document.getElementById("congrats").innerText=""
+    document.getElementsByClassName('letters').style.backgroundColor="lightgrey";
+    document.getElementsByClassName('letters').style.border="1px solid black";
 }
