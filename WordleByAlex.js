@@ -68,6 +68,7 @@ function focusOnPrev(event, prevLet, val){
     }else{}
 }
 function checkAnswer(){
+    document.getElementById("congrats").innerText="Eddig jo!"
     console.log(word)
     attempt=document.getElementById(`input${activeLine}1`).value
             +document.getElementById(`input${activeLine}2`).value
