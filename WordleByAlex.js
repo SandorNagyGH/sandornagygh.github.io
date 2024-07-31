@@ -76,6 +76,7 @@ function checkAnswer(){
     for(let i=0; i<5; i++){
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
+        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
         for(let j=0; j<5; j++){
             if(attemptSplit[i]==wordSplit[j] && i==j){
                 document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightgreen";
