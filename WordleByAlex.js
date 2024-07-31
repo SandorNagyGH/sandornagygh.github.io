@@ -74,8 +74,8 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}4`).value
             +document.getElementById(`input${activeLine}5`).value
     let attemptSplit=attempt.split('')
-    document.getElementById("congrats").innerText="Bela"
     for(let i=0; i<5; i++){
+        document.getElementById("congrats").innerText="Alvin"
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
         document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
@@ -83,6 +83,7 @@ function checkAnswer(){
     for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){
             if(attemptSplit[i]==wordSplit[j] && i==j){
+                document.getElementById("congrats").innerText="Babzy"
                 document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightgreen";
                 document.getElementById(attemptSplit[i]).style.backgroundColor="lightgreen";
                 i+=1;
@@ -92,6 +93,7 @@ function checkAnswer(){
             } else {}
         }
     }
+    document.getElementById("congrats").innerText="Eddig jo"
     if(word==attempt){
         document.getElementById("congrats").innerText="You Won!"
         document.getElementById("submit").style.display="none";
