@@ -7,16 +7,18 @@
         <link rel="stylesheet" href="./WordleByAlex.css">
     </head>
     <body>
-        <div id="game-ui">
+        <header>
+            <h5 id="score">
+                Won: <strong><span id="wonScore">0</span></strong>
+                streak: <strong><span id="streakScore">0</span></strong>
+                Lost: <strong><span id="lostScore">0</span></strong>
+            </h5>
+            <h6>Stats:  _<span id="stat1">0</span>__<span id="stat2">0</span>__<span id="stat3"> 0</span>__<span id="stat4"> 0</span>__<span id="stat5"> 0</span>__<span id="stat6"> 0</span>_</h6>
+        </header>
+        <main id="game-ui">
+            <h1>Wordle</h1>
+            <p id="instruction">I think of a word. Guess what it is!</p>
             <div id="input-area">
-                <h5 id="score">
-                    Won: <strong><span id="wonScore">0</span></strong>
-                    streak: <strong><span id="streakScore">0</span></strong>
-                    Lost: <strong><span id="lostScore">0</span></strong>
-                </h5>
-                <h6>Stats:  _<span id="stat1">0</span>__<span id="stat2">0</span>__<span id="stat3"> 0</span>__<span id="stat4"> 0</span>__<span id="stat5"> 0</span>__<span id="stat6"> 0</span>_</h6>
-                <h1>Wordle</h1>
-                <p id="instruction">I think of a word. Guess what it is!</p>
                 <div id="attempt-one-area">
                     <input id="input11" type="text" maxlength="1" oninput="focusOnNext(letter12, this.value)" value="" autofocus />
                     <input id="input12" type="text" maxlength="1" oninput="focusOnNext(letter13, this.value)" value="" onkeydown="focusOnPrev(event, letter11, this.value)" />
@@ -99,12 +101,13 @@
                     <div class="letters" id="m" value="M">M</div>
                 </div>
             </div>
-        </div>
-        <div id="divider"></div>
-        <div>
-            <p>Created by <a href="https://sandornagygh.github.io/">Alex Sandor Nagy</a></p>
-        </div>
-        
+        </main>
+        <footer>
+            <div id="divider"></div>
+            <div>
+                <p>Created by <a href="https://sandornagygh.github.io/">Alex Sandor Nagy</a></p>
+            </div>
+        </footer>
         <script src="./WordleByAlex.js"></script>
     </body>
     <!--© Created by Sandor Nagy-->
