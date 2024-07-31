@@ -67,7 +67,6 @@ function focusOnPrev(event, prevLet, val){
     }else{}
 }
 function checkAnswer(){
-    document.getElementById("congrats").innerText=word
     console.log(word)
     attempt=document.getElementById(`input${activeLine}1`).value
             +document.getElementById(`input${activeLine}2`).value
@@ -75,6 +74,7 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}4`).value
             +document.getElementById(`input${activeLine}5`).value
     let attemptSplit=attempt.split('')
+    document.getElementById("congrats").innerText="Bela"
     for(let i=0; i<5; i++){
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
