@@ -52,7 +52,6 @@ function focusOnNext(nextLet, val){
     else{nextLet.focus();}
 }
 function activeSubmit(val){
-    document.getElementById("congrats").innerText=val + "Bela";
     val=val.toLowerCase();
     const regex=/[a-z]/;
     if(val=="" || regex.test(val)==false){}
@@ -69,14 +68,13 @@ function focusOnPrev(event, prevLet, val){
 }
 function checkAnswer(){
     console.log(word)
-    attempt=document.getElementById(`input${activeLine}1`).value
-            +document.getElementById(`input${activeLine}2`).value
-            +document.getElementById(`input${activeLine}3`).value
-            +document.getElementById(`input${activeLine}4`).value
-            +document.getElementById(`input${activeLine}5`).value
+    attempt=document.getElementById(`input${activeLine}1`).value.toLowerCase()
+            +document.getElementById(`input${activeLine}2`).value.toLowerCase()
+            +document.getElementById(`input${activeLine}3`).value.toLowerCase()
+            +document.getElementById(`input${activeLine}4`).value.toLowerCase()
+            +document.getElementById(`input${activeLine}5`).value.toLowerCase()
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        document.getElementById("congrats").innerText="Bela"
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
         document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
@@ -84,7 +82,6 @@ function checkAnswer(){
     for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){
             if(attemptSplit[i]==wordSplit[j] && i==j){
-                document.getElementById("congrats").innerText="Babzy"
                 document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightgreen";
                 document.getElementById(attemptSplit[i]).style.backgroundColor="lightgreen";
                 i+=1;
@@ -94,7 +91,6 @@ function checkAnswer(){
             } else {}
         }
     }
-    document.getElementById("congrats").innerText="Eddig jo"
     if(word==attempt){
         document.getElementById("congrats").innerText="You Won!"
         document.getElementById("submit").style.display="none";
