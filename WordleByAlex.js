@@ -75,7 +75,7 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        document.getElementById("congrats").innerText="Alvin"
+        document.getElementById("congrats").innerText=attemptSplit[i]
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
         document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
