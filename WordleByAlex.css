@@ -8,7 +8,7 @@ h5, h6 {
 #wonScore, #lostScore, #streakScore {
     padding-right: 20px;
 }
-h1 {
+h1, #instruction {
     text-align: center;
 }
 #game-ui {

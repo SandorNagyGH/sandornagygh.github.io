@@ -35,6 +35,7 @@ const letter63=document.getElementById("input63")
 const letter64=document.getElementById("input64")
 const letter65=document.getElementById("input65")
 const submitBtn=document.getElementById("submit")
+const letterElements=document.getElementsByClassName("letters")
 let won=0
 let streak=0
 let lost=0
@@ -74,9 +75,12 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
+        console.log(attemptSplit[i])
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
         document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
+    }
+    for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){
             if(attemptSplit[i]==wordSplit[j] && i==j){
                 document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightgreen";
@@ -98,7 +102,7 @@ function checkAnswer(){
         document.getElementById(`stat${activeLine}`).innerText=wonStat[activeLine-1];
         streak+=1
         document.getElementById("streakScore").innerText=streak;
-        return (won, streak)
+        return (won, streak, wonStat)
     }else if(activeLine==6 && word!==attempt ){
         document.getElementById("congrats").innerText="You Lost!"
         document.getElementById("submit").style.display="none";
@@ -130,17 +134,20 @@ function playAgain(){
         document.getElementById(`input1${i+1}`).value="";
         document.getElementById(`input1${i+1}`).style.backgroundColor="white";
     }
-    for(let i=0; i<5; i++){
-        for(let j=0; j<5; j++){
-            document.getElementById(`input${i+2}${j+1}`).value=""
-            document.getElementById(`input${i+2}${j+1}`).style.backgroundColor="rgba(239, 239, 239, 0.3)";
-            document.getElementById(`input${i+2}${j+1}`).setAttribute('disabled', 'disabled');
+    for(let i=2; i<7; i++){
+        for(let j=1; j<6; j++){
+            document.getElementById(`input${i}${j}`).value=""
+            document.getElementById(`input${i}${j}`).style.backgroundColor="rgba(239, 239, 239, 0.3)";
+            document.getElementById(`input${i}${j}`).setAttribute('disabled', 'disabled');
         }
     }
     document.getElementById(`input11`).focus();
-    document.getElementById("submit").style.display="block";
     document.getElementById("playAgain").style.display="none";
+    document.getElementById("submit").style.display="block";
     document.getElementById("congrats").innerText=""
-    document.getElementsByClassName('letters').style.backgroundColor="lightgrey";
-    document.getElementsByClassName('letters').style.border="1px solid black";
+    let Alphabet=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    for(let i=0; i< Alphabet.length; i++){
+        document.getElementById(Alphabet[i]).style.backgroundColor="lightgrey";
+        document.getElementById(Alphabet[i]).style.border="1px solid black";
+    }
 }
