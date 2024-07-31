@@ -3,9 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Wordle Solver</title>
-        <link rel="stylesheet" href="wordleByAlex.css">
-        <style></style>
+        <title>Wordle Game</title>
+        <link rel="stylesheet" href="./WordleByAlex.css">
     </head>
     <body>
         <div id="game-ui">
@@ -18,7 +17,7 @@
                 <h6>Stats:  _<span id="stat1">0</span>__<span id="stat2">0</span>__<span id="stat3"> 0</span>__<span id="stat4"> 0</span>__<span id="stat5"> 0</span>__<span id="stat6"> 0</span>_</h6>
                 <h1>Wordle</h1>
                 <div id="attempt-one-area">
-                    <input id="input11" type="text" maxlength="1" autofocus  oninput="focusOnNext(letter12, this.value)" value="" />
+                    <input id="input11" type="text" maxlength="1" oninput="focusOnNext(letter12, this.value)" value="" autofocus />
                     <input id="input12" type="text" maxlength="1" oninput="focusOnNext(letter13, this.value)" value="" onkeydown="focusOnPrev(event, letter11, this.value)" />
                     <input id="input13" type="text" maxlength="1" oninput="focusOnNext(letter14, this.value)" value="" onkeydown="focusOnPrev(event, letter12, this.value)" />
                     <input id="input14" type="text" maxlength="1" oninput="focusOnNext(letter15, this.value)" value="" onkeydown="focusOnPrev(event, letter13, this.value)" />
@@ -67,36 +66,36 @@
             </div>
             <div id="letter-btn-area">
                 <div id="btns-line-one">
-                    <div class="letters" id="Q" value="Q">Q</div>
-                    <div class="letters" id="W" value="W">W</div>
-                    <div class="letters" id="E" value="E">E</div>
-                    <div class="letters" id="R" value="R">R</div>
-                    <div class="letters" id="T" value="T">T</div>
-                    <div class="letters" id="Y" value="Y">Y</div>
-                    <div class="letters" id="U" value="U">U</div>
-                    <div class="letters" id="I" value="I">I</div>
-                    <div class="letters" id="O" value="O">O</div>
-                    <div class="letters" id="P" value="P">P</div>
+                    <div class="letters" id="q" value="Q">Q</div>
+                    <div class="letters" id="w" value="W">W</div>
+                    <div class="letters" id="e" value="E">E</div>
+                    <div class="letters" id="r" value="R">R</div>
+                    <div class="letters" id="t" value="T">T</div>
+                    <div class="letters" id="y" value="Y">Y</div>
+                    <div class="letters" id="u" value="U">U</div>
+                    <div class="letters" id="i" value="I">I</div>
+                    <div class="letters" id="o" value="O">O</div>
+                    <div class="letters" id="p" value="P">P</div>
                 </div>
                 <div id="btns-line-two">
-                    <div class="letters" id="A" value="A">A</div>
-                    <div class="letters" id="S" value="S">S</div>
-                    <div class="letters" id="D" value="D">D</div>
-                    <div class="letters" id="F" value="F">F</div>
-                    <div class="letters" id="G" value="G">G</div>
-                    <div class="letters" id="H" value="H">H</div>
-                    <div class="letters" id="J" value="J">J</div>
-                    <div class="letters" id="K" value="K">K</div>
-                    <div class="letters" id="L" value="L">L</div>
+                    <div class="letters" id="a" value="A">A</div>
+                    <div class="letters" id="s" value="S">S</div>
+                    <div class="letters" id="d" value="D">D</div>
+                    <div class="letters" id="f" value="F">F</div>
+                    <div class="letters" id="g" value="G">G</div>
+                    <div class="letters" id="h" value="H">H</div>
+                    <div class="letters" id="j" value="J">J</div>
+                    <div class="letters" id="k" value="K">K</div>
+                    <div class="letters" id="l" value="L">L</div>
                 </div>
                 <div id="btns-line-three">
-                    <div class="letters" id="Z" value="Z">Z</div>
-                    <div class="letters" id="X" value="X">X</div>
-                    <div class="letters" id="C" value="C">C</div>
-                    <div class="letters" id="V" value="V">V</div>
-                    <div class="letters" id="B" value="B">B</div>
-                    <div class="letters" id="N" value="N">N</div>
-                    <div class="letters" id="M" value="M">M</div>
+                    <div class="letters" id="z" value="Z">Z</div>
+                    <div class="letters" id="x" value="X">X</div>
+                    <div class="letters" id="c" value="C">C</div>
+                    <div class="letters" id="v" value="V">V</div>
+                    <div class="letters" id="b" value="B">B</div>
+                    <div class="letters" id="n" value="N">N</div>
+                    <div class="letters" id="m" value="M">M</div>
                 </div>
             </div>
         </div>
@@ -105,7 +104,7 @@
             <p>Created by <a href="https://sandornagygh.github.io/">Alex Sandor Nagy</a></p>
         </div>
         
-        <script src="wordleByAlex.js"></script>
+        <script src="./WordleByAlex.js"></script>
     </body>
     <!--© Created by Sandor Nagy-->
 </html>
