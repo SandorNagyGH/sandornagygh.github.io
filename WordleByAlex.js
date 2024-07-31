@@ -42,7 +42,8 @@ let lost=0
 let attempt=""
 let activeLine=1
 let wonStat=[0, 0, 0, 0, 0, 0]
-let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
+let word="maybe"
+//let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
 let wordSplit=word.split('')
 
 function focusOnNext(nextLet, val){
