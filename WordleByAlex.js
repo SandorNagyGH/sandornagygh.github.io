@@ -42,8 +42,7 @@ let lost=0
 let attempt=""
 let activeLine=1
 let wonStat=[0, 0, 0, 0, 0, 0]
-let word="maybe"
-//let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
+let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
 let wordSplit=word.split('')
 
 function focusOnNext(nextLet, val){
@@ -68,7 +67,7 @@ function focusOnPrev(event, prevLet, val){
     }else{}
 }
 function checkAnswer(){
-    document.getElementById("congrats").innerText="Eddig jo!"
+    document.getElementById("congrats").innerText=word
     console.log(word)
     attempt=document.getElementById(`input${activeLine}1`).value
             +document.getElementById(`input${activeLine}2`).value
