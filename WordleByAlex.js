@@ -52,6 +52,7 @@ function focusOnNext(nextLet, val){
     else{nextLet.focus();}
 }
 function activeSubmit(val){
+    document.getElementById("congrats").innerText=val + "Bela";
     val=val.toLowerCase();
     const regex=/[a-z]/;
     if(val=="" || regex.test(val)==false){}
@@ -75,7 +76,7 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        document.getElementById("congrats").innerText=attemptSplit[i]
+        document.getElementById("congrats").innerText="Bela"
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
         document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
