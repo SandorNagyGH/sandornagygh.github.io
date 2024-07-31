@@ -42,7 +42,7 @@ let lost=0
 let attempt=""
 let activeLine=1
 let wonStat=[0, 0, 0, 0, 0, 0]
-let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA.length)]
+let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
 let wordSplit=word.split('')
 
 function focusOnNext(nextLet, val){
@@ -75,7 +75,6 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        console.log(attemptSplit[i])
         document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
         document.getElementById(attemptSplit[i]).style.border="none";
         document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
@@ -127,7 +126,7 @@ function acitvateNextLine(lineNumber){
 function playAgain(){
     attempt=""
     activeLine=1
-    word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA.length)]
+    word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
     wordSplit=word.split('')
     for(let i=0; i<5; i++){
         document.getElementById(`input1${i+1}`).removeAttribute('disabled');
