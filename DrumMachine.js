@@ -153,6 +153,7 @@ function playSound(e, z){
       display.innerText=f.replace(/-/g, " ")
       let a=document.getElementById(f)
       a.currentTime = 0;
+      a.volume=sliderVal;
       a.play()
     }
   }
