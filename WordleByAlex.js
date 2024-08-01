@@ -103,7 +103,7 @@ function checkAnswer(){
         document.getElementById("streakScore").innerText=streak;
         return (won, streak, wonStat)
     }else if(activeLine==6 && word!==attempt ){
-        document.getElementById("congrats").innerText="You Lost!"
+        document.getElementById("congrats").innerText="The word was: ' " + word + " '! You Lost.";
         document.getElementById("submit").style.display="none";
         document.getElementById("playAgain").style.display="block";
         lost+=1
