@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Wordle Játék</title>
+        <link rel="stylesheet" href="MagyarWordle.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <header>
+            <h5 id="score">
+                Nyert: <strong><span id="wonScore">0</span></strong>
+                egyhuzamban: <strong><span id="streakScore">0</span></strong>
+                <button id="statsBtn" onclick="statistics()">Stat <i class="fa fa-bar-chart-o"></i></button>
+            </h5>
+            <h1>Wordle</h1>
+            <div id="statsContainer">
+                <div id="statsPanel">
+                        <h6 id="GameS">Játék Statisztika <button id="hideStats" onclick="hideStats()"><i class="fa fa-window-close"></i></button></h6>
+                        <p><strong>Játszott: </strong><span id="played"></span></p>
+                        <p><strong>Nyerés%: </strong><span id="winStat"></span>%</p>
+                        <p><strong>Egyhuzamban: </span></strong><span id="currentStreak"></span></p>
+                        <p><strong>Max egyhuzamban: </strong><span id="maxStreak"></span></p>
+                        <div id="diagram">Diagram lesz itt egyszer... 
+                            <div id="diagramStats"></div>
+                        </div>
+                        <p>Stat törlés <button id="resetBtn" onclick="resetStats()">Törlés <i class="fa fa-refresh"></i></button></p>
+                </div>
+            </div>
+        </header>
+        <main id="game-ui">
+            <p id="instruction">Gondoltam egy szóra. Találd ki mi az!</p>
+            <div id="input-area">
+                <div id="attempt-one-area">
+                    <input id="input11" type="text" maxlength="1" oninput="focusOnNext(letter12, this.value)" value="" autofocus />
+                    <input id="input12" type="text" maxlength="1" oninput="focusOnNext(letter13, this.value)" value="" onkeydown="focusOnPrev(event, letter11, this.value)" />
+                    <input id="input13" type="text" maxlength="1" oninput="focusOnNext(letter14, this.value)" value="" onkeydown="focusOnPrev(event, letter12, this.value)" />
+                    <input id="input14" type="text" maxlength="1" oninput="focusOnNext(letter15, this.value)" value="" onkeydown="focusOnPrev(event, letter13, this.value)" />
+                    <input id="input15" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter14, this.value)" />
+                </div>
+                <div id="attempt-two-area">
+                    <input id="input21" type="text" maxlength="1" oninput="focusOnNext(letter22, this.value)" value="" disabled />
+                    <input id="input22" type="text" maxlength="1" oninput="focusOnNext(letter23, this.value)" value="" onkeydown="focusOnPrev(event, letter21, this.value)" disabled />
+                    <input id="input23" type="text" maxlength="1" oninput="focusOnNext(letter24, this.value)" value="" onkeydown="focusOnPrev(event, letter22, this.value)" disabled />
+                    <input id="input24" type="text" maxlength="1" oninput="focusOnNext(letter25, this.value)" value="" onkeydown="focusOnPrev(event, letter23, this.value)" disabled />
+                    <input id="input25" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter24, this.value)" disabled />
+                </div>
+                <div id="attempt-three-area">
+                    <input id="input31" type="text" maxlength="1" oninput="focusOnNext(letter32, this.value)" value="" disabled />
+                    <input id="input32" type="text" maxlength="1" oninput="focusOnNext(letter33, this.value)" value="" onkeydown="focusOnPrev(event, letter31, this.value)" disabled />
+                    <input id="input33" type="text" maxlength="1" oninput="focusOnNext(letter34, this.value)" value="" onkeydown="focusOnPrev(event, letter32, this.value)" disabled />
+                    <input id="input34" type="text" maxlength="1" oninput="focusOnNext(letter35, this.value)" value="" onkeydown="focusOnPrev(event, letter33, this.value)" disabled />
+                    <input id="input35" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter34, this.value)" disabled />
+                </div>
+                <div id="attempt-four-area">
+                    <input id="input41" type="text" maxlength="1" oninput="focusOnNext(letter42, this.value)" value="" disabled />
+                    <input id="input42" type="text" maxlength="1" oninput="focusOnNext(letter43, this.value)" value="" onkeydown="focusOnPrev(event, letter41, this.value)" disabled />
+                    <input id="input43" type="text" maxlength="1" oninput="focusOnNext(letter44, this.value)" value="" onkeydown="focusOnPrev(event, letter42, this.value)" disabled />
+                    <input id="input44" type="text" maxlength="1" oninput="focusOnNext(letter45, this.value)" value="" onkeydown="focusOnPrev(event, letter43, this.value)" disabled />
+                    <input id="input45" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter44, this.value)" disabled />
+                </div>
+                <div id="attempt-five-area">
+                    <input id="input51" type="text" maxlength="1" oninput="focusOnNext(letter52, this.value)" value="" disabled />
+                    <input id="input52" type="text" maxlength="1" oninput="focusOnNext(letter53, this.value)" value="" onkeydown="focusOnPrev(event, letter51, this.value)" disabled />
+                    <input id="input53" type="text" maxlength="1" oninput="focusOnNext(letter54, this.value)" value="" onkeydown="focusOnPrev(event, letter52, this.value)" disabled />
+                    <input id="input54" type="text" maxlength="1" oninput="focusOnNext(letter55, this.value)" value="" onkeydown="focusOnPrev(event, letter53, this.value)" disabled />
+                    <input id="input55" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter54, this.value)" disabled />
+                </div>
+                <div id="attempt-six-area">
+                    <input id="input61" type="text" maxlength="1" oninput="focusOnNext(letter62, this.value)" value="" disabled />
+                    <input id="input62" type="text" maxlength="1" oninput="focusOnNext(letter63, this.value)" value="" onkeydown="focusOnPrev(event, letter61, this.value)" disabled />
+                    <input id="input63" type="text" maxlength="1" oninput="focusOnNext(letter64, this.value)" value="" onkeydown="focusOnPrev(event, letter62, this.value)" disabled />
+                    <input id="input64" type="text" maxlength="1" oninput="focusOnNext(letter65, this.value)" value="" onkeydown="focusOnPrev(event, letter63, this.value)" disabled />
+                    <input id="input65" type="text" maxlength="1" oninput="activeSubmit(this.value)" value="" onkeydown="focusOnPrev(event, letter64, this.value)" disabled />
+                </div>
+            </div>
+            <h1 id="congrats"></h1>
+            <div id="submitdiv">
+                <button id="submit" onclick="checkAnswer()" disabled >SUBMIT</button>
+                <button id="playAgain" onclick="playAgain()">PLAY AGAIN</button>
+            </div>
+            <div id="letter-btn-area">
+                <div id="btns-line-one">
+                    <div class="letters" id="q" value="Q">Q</div>
+                    <div class="letters" id="w" value="W">W</div>
+                    <div class="letters" id="e" value="E">E</div>
+                    <div class="letters" id="r" value="R">R</div>
+                    <div class="letters" id="t" value="T">T</div>
+                    <div class="letters" id="y" value="Y">Y</div>
+                    <div class="letters" id="u" value="U">U</div>
+                    <div class="letters" id="i" value="I">I</div>
+                    <div class="letters" id="o" value="O">O</div>
+                    <div class="letters" id="p" value="P">P</div>
+                </div>
+                <div id="btns-line-two">
+                    <div class="letters" id="a" value="A">A</div>
+                    <div class="letters" id="s" value="S">S</div>
+                    <div class="letters" id="d" value="D">D</div>
+                    <div class="letters" id="f" value="F">F</div>
+                    <div class="letters" id="g" value="G">G</div>
+                    <div class="letters" id="h" value="H">H</div>
+                    <div class="letters" id="j" value="J">J</div>
+                    <div class="letters" id="k" value="K">K</div>
+                    <div class="letters" id="l" value="L">L</div>
+                </div>
+                <div id="btns-line-three">
+                    <div class="letters" id="z" value="Z">Z</div>
+                    <div class="letters" id="x" value="X">X</div>
+                    <div class="letters" id="c" value="C">C</div>
+                    <div class="letters" id="v" value="V">V</div>
+                    <div class="letters" id="b" value="B">B</div>
+                    <div class="letters" id="n" value="N">N</div>
+                    <div class="letters" id="m" value="M">M</div>
+                </div>
+                <div id="btns-line-four">
+                    <div class="letters" id="á" value="Á">Á</div>
+                    <div class="letters" id="é" value="É">É</div>
+                    <div class="letters" id="í" value="Í">Í</div>
+                    <div class="letters" id="ó" value="Ó">Ó</div>
+                    <div class="letters" id="ö" value="Ö">Ö</div>
+                    <div class="letters" id="ő" value="Ő">Ő</div>
+                    <div class="letters" id="ú" value="Ú">Ú</div>
+                    <div class="letters" id="ü" value="Ü">Ü</div>
+                    <div class="letters" id="ű" value="Ű">Ű</div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="divider"></div>
+            <div>
+                <p>Készítette <a href="https://sandornagygh.github.io/">Nagy Sándor</a></p>
+            </div>
+        </footer>
+        <script src="MagyarWordle.js"></script>
+    </body>
+    <!--© Created by Sandor Nagy-->
+</html>
