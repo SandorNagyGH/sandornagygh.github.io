@@ -49,7 +49,6 @@ getWonStat()
 
 function getWonStat(){
     wonStat=localStorage.getItem("wonStat").split(",").map(Number)
-    console.log(wonStat)
     document.getElementById("wonScore").innerText=wonStat[0]
     document.getElementById("streakScore").innerText=wonStat[2]
 }
@@ -58,8 +57,7 @@ function resetStats(){
 }
 function statistics(){
     document.getElementById("statsPanel").style.display="block";
-    document.getElementById("instruction").style.display="none";
-    document.getElementById("input-area").style.display="none";
+    document.getElementById("game-ui").style.display="none";
     document.getElementById("played").innerHTML=wonStat[0]+wonStat[1]
     document.getElementById("winStat").innerHTML=Math.floor(wonStat[0]/(wonStat[0]+wonStat[1])*100)
     document.getElementById("currentStreak").innerHTML=wonStat[2]
@@ -68,8 +66,7 @@ function statistics(){
 }
 function hideStats(){
     document.getElementById("statsPanel").style.display="none"
-    document.getElementById("instruction").style.display="block";
-    document.getElementById("input-area").style.display="block";
+    document.getElementById("game-ui").style.display="block";
 }
 function focusOnNext(nextLet, val){
     val=val.toLowerCase();
@@ -93,7 +90,7 @@ function focusOnPrev(event, prevLet, val){
     }else{}
 }
 function checkAnswer(){
-    console.log(word)
+    if(activeLine==1){console.log(word)}
     attempt=document.getElementById(`input${activeLine}1`).value.toLowerCase()
             +document.getElementById(`input${activeLine}2`).value.toLowerCase()
             +document.getElementById(`input${activeLine}3`).value.toLowerCase()
@@ -101,9 +98,9 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value.toLowerCase()
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        document.getElementById(attemptSplit[i]).style.backgroundColor="lightblue";
+        document.getElementById(attemptSplit[i]).style.backgroundColor="#B39EB5";
         document.getElementById(attemptSplit[i]).style.border="none";
-        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="lightblue";
+        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="#B39EB5";
     }
     for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){

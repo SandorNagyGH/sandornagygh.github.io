@@ -15,10 +15,7 @@
                 current streak: <strong><span id="streakScore">0</span></strong>
                 <button id="statsBtn" onclick="statistics()">Stats <i class="fa fa-bar-chart-o"></i></button>
             </h5>
-        </header>
-        <main id="game-ui">
             <h1>Wordle</h1>
-            <p id="instruction">I think of a word. Guess what it is!</p>
             <div id="statsContainer">
                 <div id="statsPanel">
                         <h6 id="GameS">Game Statisitcs <button id="hideStats" onclick="hideStats()"><i class="fa fa-window-close"></i></button></h6>
@@ -32,6 +29,9 @@
                         <p>Reset stats <button id="resetBtn" onclick="resetStats()">Reset <i class="fa fa-refresh"></i></button></p>
                 </div>
             </div>
+        </header>
+        <main id="game-ui">
+            <p id="instruction">I think of a word. Guess what it is!</p>
             <div id="input-area">
                 <div id="attempt-one-area">
                     <input id="input11" type="text" maxlength="1" oninput="focusOnNext(letter12, this.value)" value="" autofocus />
