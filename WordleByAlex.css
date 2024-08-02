@@ -1,18 +1,65 @@
 body {
     background-color: lightblue;
 }
-h5, h6 {
+h5 {
     text-align: right;
     margin: 10px 0 0 0;
 }
-#wonScore, #lostScore, #streakScore {
+#wonScore, #streakScore {
     padding-right: 20px;
+}
+#statsBtn {
+    background-color: blue;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-right: 20px;
 }
 h1, #instruction {
     text-align: center;
 }
+#statsContainer {
+    display: flex;
+    justify-content: center;
+}
+#statsPanel {
+    width: 300px;
+    height: 400px;
+    background-color: blue;
+    display: none;
+}
+#GameS {
+    height: 30px;
+    font-size: 24px;
+    color: white;
+    text-align: right;
+    margin: 0;
+    margin-bottom: 20px;
+}
+#hideStats {
+    height: 30px;
+    font-size: 30px;
+    color: white;
+    background-color: blue;
+    border: none;
+    margin-left: 50px;
+}
+#statsPanel p {
+    margin-top: 10px;
+}
+#statsPanel strong {
+    padding-left: 10px;
+    color: white;
+    width: 150px;
+}
+#diagram {
+    width: 280px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+}
 #game-ui {
-    height: 95vh;
+    height: 86vh;
 }
 #attempt-one-area, #attempt-two-area, #attempt-three-area, #attempt-four-area, #attempt-five-area,  #attempt-six-area,
 #btns-line-one, #btns-line-two, #btns-line-three {
@@ -55,6 +102,9 @@ input {
 button:hover {
     cursor: pointer;
 }
+#letter-btn-area {
+    padding-bottom: 30px;
+}
 .letters {
     background-color: lightgrey;
     border: 1px solid black;
@@ -62,6 +112,12 @@ button:hover {
     height: 20px;
     text-align: center;
     margin: 0 10px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: lightblue;
 }
 #divider {
     background-color: black;

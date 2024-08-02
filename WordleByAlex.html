@@ -5,19 +5,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Wordle Game</title>
         <link rel="stylesheet" href="WordleByAlex.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
     </head>
     <body>
         <header>
             <h5 id="score">
                 Won: <strong><span id="wonScore">0</span></strong>
-                streak: <strong><span id="streakScore">0</span></strong>
-                Lost: <strong><span id="lostScore">0</span></strong>
+                current streak: <strong><span id="streakScore">0</span></strong>
+                <button id="statsBtn" onclick="statistics()">Stats <i class="fa fa-bar-chart-o"></i></button>
             </h5>
-            <h6>Stats:  _<span id="stat1">0</span>__<span id="stat2">0</span>__<span id="stat3"> 0</span>__<span id="stat4"> 0</span>__<span id="stat5"> 0</span>__<span id="stat6"> 0</span>_</h6>
         </header>
         <main id="game-ui">
             <h1>Wordle</h1>
             <p id="instruction">I think of a word. Guess what it is!</p>
+            <div id="statsContainer">
+                <div id="statsPanel">
+                        <h6 id="GameS">Game Statisitcs <button id="hideStats" onclick="hideStats()"><i class="fa fa-window-close"></i></button></h6>
+                        <p><strong>Played: </strong><span id="played"></span></p>
+                        <p><strong>Win%: </strong><span id="winStat"></span>%</p>
+                        <p><strong>Current streak: </span></strong><span id="currentStreak"></span></p>
+                        <p><strong>Max streak: </strong><span id="maxStreak"></span></p>
+                        <div id="diagram">Diagram comes here 
+                            <div id="diagramStats"></div>
+                        </div>
+                        <p>Reset stats <button id="resetBtn" onclick="resetStats()">Reset <i class="fa fa-refresh"></i></button></p>
+                </div>
+            </div>
             <div id="input-area">
                 <div id="attempt-one-area">
                     <input id="input11" type="text" maxlength="1" oninput="focusOnNext(letter12, this.value)" value="" autofocus />

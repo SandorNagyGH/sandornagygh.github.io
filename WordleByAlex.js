@@ -41,10 +41,36 @@ let streak=0
 let lost=0
 let attempt=""
 let activeLine=1
-let wonStat=[0, 0, 0, 0, 0, 0]
+let wonStat=[0, 0, 0, 0,0, 0, 0, 0, 0, 0] //[won, lost, current streak, max streak, winfirstattempt, winsecondattempt,...]
 let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
 let wordSplit=word.split('')
+getWonStat()
 
+
+function getWonStat(){
+    wonStat=localStorage.getItem("wonStat").split(",").map(Number)
+    console.log(wonStat)
+    document.getElementById("wonScore").innerText=wonStat[0]
+    document.getElementById("streakScore").innerText=wonStat[2]
+}
+function resetStats(){
+    localStorage.removeItem("wonStat")
+}
+function statistics(){
+    document.getElementById("statsPanel").style.display="block";
+    document.getElementById("instruction").style.display="none";
+    document.getElementById("input-area").style.display="none";
+    document.getElementById("played").innerHTML=wonStat[0]+wonStat[1]
+    document.getElementById("winStat").innerHTML=Math.floor(wonStat[0]/(wonStat[0]+wonStat[1])*100)
+    document.getElementById("currentStreak").innerHTML=wonStat[2]
+    document.getElementById("maxStreak").innerHTML=wonStat[3]
+    document.getElementById("diagramStats").innerHTML=wonStat[4]+","+wonStat[5]+","+wonStat[6]+","+wonStat[7]+","+wonStat[8]+","+wonStat[9]
+}
+function hideStats(){
+    document.getElementById("statsPanel").style.display="none"
+    document.getElementById("instruction").style.display="block";
+    document.getElementById("input-area").style.display="block";
+}
 function focusOnNext(nextLet, val){
     val=val.toLowerCase();
     const regex=/[a-z]/;
@@ -95,22 +121,18 @@ function checkAnswer(){
         document.getElementById("congrats").innerText="You Won!"
         document.getElementById("submit").style.display="none";
         document.getElementById("playAgain").style.display="block";
-        won+=1
-        document.getElementById("wonScore").innerText=won;
-        wonStat[activeLine-1]+=1
-        document.getElementById(`stat${activeLine}`).innerText=wonStat[activeLine-1];
-        streak+=1
-        document.getElementById("streakScore").innerText=streak;
-        return (won, streak, wonStat)
+        if(wonStat[2]==wonStat[3]){wonStat[3]+=1}
+        wonStat[0]+=1
+        wonStat[2]+=1
+        wonStat[activeLine+3]+=1
+        updateStats(wonStat)
     }else if(activeLine==6 && word!==attempt ){
         document.getElementById("congrats").innerText="The word was: ' " + word + " '! You Lost.";
         document.getElementById("submit").style.display="none";
         document.getElementById("playAgain").style.display="block";
-        lost+=1
-        document.getElementById("lostScore").innerText=lost;
-        streak=0
-        document.getElementById("streakScore").innerText=streak;
-        return (lost, streak)
+        wonStat[1]+=1
+        wonStat[2]=0
+        updateStats(wonStat)
     }else{acitvateNextLine(activeLine)}
     activeLine=activeLine+1
     return activeLine
@@ -122,6 +144,11 @@ function acitvateNextLine(lineNumber){
         document.getElementById(`input${lineNumber+1}${i+1}`).style.backgroundColor="white";
     }
     document.getElementById(`input${lineNumber+1}1`).focus();
+}
+function updateStats(wonStat){
+    let stringWonStat=wonStat.map(String).join(",")
+    localStorage.setItem("wonStat", stringWonStat)
+    getWonStat()
 }
 function playAgain(){
     attempt=""
