@@ -31,6 +31,19 @@
                 </div>
                 <div id="settingsPanel">
                     <h6 id="GameSet">Beállítások <button id="hideSettings" onclick="hideSettings()"><i class="fa fa-window-close"></i></button></h6>
+                    <label for="colorChoice">Színek
+                        <select id="colorChoice" name="colorChoice">
+                          <option value="">(select one)</option>
+                          <option value="#B39EB5, purple">Lila</option>
+                          <option value="lightblue, blue">Halványkék</option>
+                          <option value="blue, darkblue">Kék</option>
+                          <option value="grey, darkgrey">Szürke</option>
+                          <option value="black, lightgrey">Fekete</option>
+                          <option value="#E9DDAD, yellow">Bézs</option>
+                          <option value="#4B1D13, #F44923">Sötétbarna</option>
+                        </select>
+                        <button id="colorBtn" onclick="setColor(colorChoice.value)">Apply</button>
+                    </label>
                 </div>
             </div>
         </header>

@@ -69,6 +69,12 @@ let wordSplit=word.split('')
 getWonStat()
 
 
+function setColor(colorPair){
+    let colorA=colorPair.split(",")[0]
+    let colorB=colorPair.split(",")[1]
+    document.querySelector(':root').style.setProperty('--theme1', colorA);
+    document.querySelector(':root').style.setProperty('--theme1pair', colorB);
+}
 function settings(){
     document.getElementById("settingsPanel").style.display="block";
     document.getElementById("game-ui").style.display="none";
@@ -132,9 +138,9 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value.toLowerCase()
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        document.getElementById(attemptSplit[i]).style.backgroundColor="#B39EB5";
+        document.getElementById(attemptSplit[i]).style.backgroundColor=getComputedStyle(document.querySelector(':root')).getPropertyValue('--theme1');
         document.getElementById(attemptSplit[i]).style.border="none";
-        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="#B39EB5";
+        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor=getComputedStyle(document.querySelector(':root')).getPropertyValue('--theme1');
     }
     for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){
