@@ -42,11 +42,25 @@ let lost=0
 let attempt=""
 let activeLine=1
 let wonStat=[0, 0, 0, 0,0, 0, 0, 0, 0, 0] //[won, lost, current streak, max streak, winfirstattempt, winsecondattempt,...]
-let word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
+let tempNum=Math.floor(Math.random()*ListA.length)
+let word=ListA[tempNum][Math.floor(Math.random()*ListA[tempNum].length)]
+//let word="stark"
 let wordSplit=word.split('')
 getWonStat()
 
 
+function settings(){
+    document.getElementById("settingsPanel").style.display="block";
+    document.getElementById("game-ui").style.display="none";
+}
+function hideSettings(){
+    document.getElementById("settingsPanel").style.display="none";
+    document.getElementById("game-ui").style.display="block";
+}
+function  playsound(a){
+    a.currentTime = 0;
+    a.play()
+}
 function getWonStat(){
     wonStat=localStorage.getItem("wonStat").split(",").map(Number)
     document.getElementById("wonScore").innerText=wonStat[0]
@@ -116,6 +130,7 @@ function checkAnswer(){
     }
     if(word==attempt){
         document.getElementById("congrats").innerText="You Won!"
+        playsound(winning)
         document.getElementById("submit").style.display="none";
         document.getElementById("playAgain").style.display="block";
         if(wonStat[2]==wonStat[3]){wonStat[3]+=1}
@@ -125,6 +140,7 @@ function checkAnswer(){
         updateStats(wonStat)
     }else if(activeLine==6 && word!==attempt ){
         document.getElementById("congrats").innerText="The word was: ' " + word + " '! You Lost.";
+        playsound(gameOver)
         document.getElementById("submit").style.display="none";
         document.getElementById("playAgain").style.display="block";
         wonStat[1]+=1
@@ -150,7 +166,8 @@ function updateStats(wonStat){
 function playAgain(){
     attempt=""
     activeLine=1
-    word=ListA[Math.floor(Math.random()*ListA.length)][Math.floor(Math.random()*ListA[0].length)]
+    tempNum=Math.floor(Math.random()*ListA.length)
+    word=ListA[tempNum][Math.floor(Math.random()*ListA[tempNum].length)]
     wordSplit=word.split('')
     for(let i=0; i<5; i++){
         document.getElementById(`input1${i+1}`).removeAttribute('disabled');
