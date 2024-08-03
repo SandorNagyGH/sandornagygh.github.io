@@ -49,6 +49,12 @@ let wordSplit=word.split('')
 getWonStat()
 
 
+function setColor(colorPair){
+    let colorA=colorPair.split(",")[0]
+    let colorB=colorPair.split(",")[1]
+    document.querySelector(':root').style.setProperty('--theme1', colorA);
+    document.querySelector(':root').style.setProperty('--theme1pair', colorB);
+}
 function settings(){
     document.getElementById("settingsPanel").style.display="block";
     document.getElementById("game-ui").style.display="none";

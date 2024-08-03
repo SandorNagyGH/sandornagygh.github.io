@@ -31,6 +31,20 @@
                 </div>
                 <div id="settingsPanel">
                     <h6 id="GameSet">Settings <button id="hideSettings" onclick="hideSettings()"><i class="fa fa-window-close"></i></button></h6>
+                    <label for="colorChoice">Color theme
+                        <select id="colorChoice" name="colorChoice">
+                          <option value="">(select one)</option>
+                          <option value="#B39EB5, purple">Purple</option>
+                          <option value="lightblue, blue">Lightblue</option>
+                          <option value="blue, darkblue">Blue</option>
+                          <option value="grey, darkgrey">Grey</option>
+                          <option value="black, lightgrey">Black</option>
+                          <option value="#E9DDAD, yellow">Beige</option>
+                          <option value="#4B1D13, #F44923">Darkbrown</option>
+                        </select>
+                        <button id="colorBtn" onclick="setColor(colorChoice.value)">Apply</button>
+                    </label>
+                    
                 </div>
             </div>
         </header>
