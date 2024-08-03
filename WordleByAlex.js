@@ -118,9 +118,9 @@ function checkAnswer(){
             +document.getElementById(`input${activeLine}5`).value.toLowerCase()
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
-        document.getElementById(attemptSplit[i]).style.backgroundColor="#B39EB5";
+        document.getElementById(attemptSplit[i]).style.backgroundColor=getComputedStyle(document.querySelector(':root')).getPropertyValue('--theme1');
         document.getElementById(attemptSplit[i]).style.border="none";
-        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor="#B39EB5";
+        document.getElementById(`input${activeLine}${i+1}`).style.backgroundColor=getComputedStyle(document.querySelector(':root')).getPropertyValue('--theme1');
     }
     for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){
