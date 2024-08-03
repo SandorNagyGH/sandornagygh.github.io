@@ -1,5 +1,9 @@
+:root {
+    --theme1: #B39EB5;
+    --theme1pair: purple;
+}
 body {
-    background-color: #B39EB5;
+    background-color: var(--theme1);
 }
 h5 {
     text-align: right;
@@ -9,11 +13,17 @@ h5 {
     padding-right: 20px;
 }
 #statsBtn {
-    background-color: purple;
+    background-color: var(--theme1pair);
     border-radius: 5px;
     border: none;
     color: white;
     margin-right: 20px;
+}
+#settingsBtn {
+    background-color: var(--theme1pair);
+    border-radius: 5px;
+    color: white;
+    border: none;
 }
 h1, #instruction {
     text-align: center;
@@ -25,11 +35,18 @@ h1, #instruction {
 #statsPanel {
     width: 300px;
     height: 400px;
-    background-color: purple;
+    background-color: var(--theme1pair);
     display: none;
     margin-top: 50px;
 }
-#GameS {
+#settingsPanel {
+    width: 300px;
+    height: 400px;
+    background-color: var(--theme1pair);
+    display: none;
+    margin-top: 50px;
+}
+#GameS, #GameSet {
     height: 30px;
     font-size: 24px;
     color: white;
@@ -37,11 +54,11 @@ h1, #instruction {
     margin: 0;
     margin-bottom: 20px;
 }
-#hideStats {
+#hideStats, #hideSettings {
     height: 30px;
     font-size: 30px;
     color: white;
-    background-color: purple;
+    background-color: var(--theme1pair);
     border: none;
     margin-left: 50px;
 }
@@ -60,7 +77,7 @@ h1, #instruction {
     background-color: white;
 }
 #resetBtn {
-    background-color: #B39EB5;
+    background-color: var(--theme1);
     border: 1px solid white;
     border-radius: 5px;
 }
@@ -92,7 +109,7 @@ input {
     border-radius: 20px;
     width: 100px;
     height: 40px;
-    background-color: purple;
+    background-color: var(--theme1pair);
     color: white;
 }
 #playAgain {
@@ -101,7 +118,7 @@ input {
     border-radius: 20px;
     width: 140px;
     height: 40px;
-    background-color: purple;
+    background-color: var(--theme1pair);
     color: white;
     display: none;
 }
@@ -123,7 +140,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #B39EB5;
+    background-color: var(--theme1);
 }
 #divider {
     background-color: black;
