@@ -221,7 +221,7 @@ function handleBtnInput(id){
     }
 }
 function focusOnPrev(){
-    if(activeLetter==1){} else {
+    if(activeLetter==1 || activeLetter==6 || activeLetter==11 || activeLetter==16 || activeLetter==21 || activeLetter==26){} else {
         playsound(clickSound)
         if(submitOn==true){
             document.getElementById(`input${activeLetter}`).innerHTML=""
