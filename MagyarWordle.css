@@ -12,18 +12,12 @@ h5 {
 #wonScore, #streakScore {
     padding-right: 20px;
 }
-#statsBtn {
+#statsBtn, #settingsBtn {
     background-color: var(--theme1pair);
     border-radius: 5px;
     border: none;
     color: white;
     margin-right: 20px;
-}
-#settingsBtn {
-    background-color: var(--theme1pair);
-    border-radius: 5px;
-    color: white;
-    border: none;
 }
 h1, #instruction {
     text-align: center;
@@ -32,14 +26,7 @@ h1, #instruction {
     display: flex;
     justify-content: center;
 }
-#statsPanel {
-    width: 300px;
-    height: 400px;
-    background-color: var(--theme1pair);
-    display: none;
-    margin-top: 50px;
-}
-#settingsPanel {
+#statsPanel, #settingsPanel {
     width: 300px;
     height: 400px;
     background-color: var(--theme1pair);
@@ -81,16 +68,26 @@ h1, #instruction {
     border: 1px solid white;
     border-radius: 5px;
 }
+#settingsPanel {
+    padding-left: 5px;
+}
+label {
+    margin-top: 20px;
+}
 #game-ui {
     height: 86vh;
 }
+#input-areaB {
+    display: none;
+}
 #attempt-one-area, #attempt-two-area, #attempt-three-area, #attempt-four-area, #attempt-five-area,  #attempt-six-area,
-#btns-line-one, #btns-line-two, #btns-line-three, #btns-line-four {
+#btns-line-one, #btns-line-two, #btns-line-three, #btns-line-four,
+#attempt-one-areaB, #attempt-two-areaB, #attempt-three-areaB, #attempt-four-areaB, #attempt-five-areaB, #attempt-six-areaB {
     margin: 10px;
     display: flex;
     justify-content: center;
 }
-input {
+.attLin {
     text-align: center;
     border: lightgrey;
     width: 30px;
@@ -99,12 +96,21 @@ input {
     border-radius: 5px;
     font-size: 24px;
 }
+.attemptLine1 {
+    background-color: white;
+}
+.attemptLine2, .attemptLine3, .attemptLine4, .attemptLine5, .attemptLine6 {
+    background-color: rgba(239, 239, 239, 0.3);
+}
+#input1 {
+    border: 2px solid black;
+}
 #submitdiv {
     display: flex;
     justify-content: center;
 }
 #submit {
-    margin: 40px;
+    margin: 30px;
     border: none;
     border-radius: 20px;
     width: 100px;
@@ -122,7 +128,7 @@ input {
     color: white;
     display: none;
 }
-button:hover {
+button:hover, .letters:hover {
     cursor: pointer;
 }
 #letter-btn-area {
@@ -131,10 +137,12 @@ button:hover {
 .letters {
     background-color: lightgrey;
     border: 1px solid black;
-    width: 20px;
-    height: 20px;
-    text-align: center;
+    width: 30px;
+    height: 40px;
     margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer {
     position: fixed;
@@ -152,4 +160,18 @@ p {
 }
 a {
     text-decoration: none;
+}
+@media only screen and (max-width: 420px) {
+    #submit {
+        margin: 10px;
+    }
+    #btns-line-one, #btns-line-two, #btns-line-three, #btns-line-four {
+        margin: 10px 0;
+    }
+    .letters {
+        margin: 0 2px;
+    }
+    footer {
+        position: relative;
+    }
 }
