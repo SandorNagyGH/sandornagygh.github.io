@@ -111,6 +111,7 @@ function setupGame(){
             document.getElementById(`input${i}`).innerHTML=""
             document.getElementById(`input${i}`).style.backgroundColor="rgba(239, 239, 239, 0.3)";
         }
+        document.getElementById("input1").style.border="2px solid black"
     }else if(setInp==2){
         activeLetter=31
         for(let i=0; i<alphabet.length; i++){
@@ -130,11 +131,11 @@ function setupGame(){
         document.getElementById("input31").focus()
     }
 }
-function setInput(setI){
-    if(setI==1){setInp=1
+function setInput(){
+    if(document.querySelector('input[name="screenChoice"]:checked').value=="0"){setInp=1
         document.getElementById("input-areaB").style.display="none";
         document.getElementById("input-areaA").style.display="block";
-    }else if(setI==2){setInp=2
+    }else if(document.querySelector('input[name="screenChoice"]:checked').value=="1"){setInp=2
         document.getElementById("input-areaA").style.display="none";
         document.getElementById("input-areaB").style.display="block";
     }
@@ -156,8 +157,11 @@ function hideSettings(){
     setupGame()
 }
 function  playsound(a){
-    a.currentTime = 0;
-    a.play()
+    if(document.querySelector('input[name="musicChoice"]:checked').value=="musicOff"){
+    }else{
+        a.currentTime = 0;
+        a.play()
+    }
 }
 function getWonStat(){
     wonStat=localStorage.getItem("wonStat").split(",").map(Number)
@@ -248,10 +252,10 @@ function checkAnswer(){
             +document.getElementById(`input${activeLetter}`).innerHTML.toLowerCase()
     }else if(setInp==2){
         attempt=document.getElementById(`input${activeLetter-4}`).value.toLowerCase()
-        +document.getElementById(`input${activeLetter-3}`).value.toLowerCase()
-        +document.getElementById(`input${activeLetter-2}`).value.toLowerCase()
-        +document.getElementById(`input${activeLetter-1}`).value.toLowerCase()
-        +document.getElementById(`input${activeLetter}`).value.toLowerCase()
+            +document.getElementById(`input${activeLetter-3}`).value.toLowerCase()
+            +document.getElementById(`input${activeLetter-2}`).value.toLowerCase()
+            +document.getElementById(`input${activeLetter-1}`).value.toLowerCase()
+            +document.getElementById(`input${activeLetter}`).value.toLowerCase()
     }
     let attemptSplit=attempt.split('')
     for(let i=0; i<5; i++){
@@ -261,14 +265,18 @@ function checkAnswer(){
     }
     for(let i=0; i<5; i++){
         for(let j=0; j<5; j++){
+            if(attemptSplit[i]==wordSplit[j] && i!==j){
+                document.getElementById(`input${activeLetter-4+i}`).style.backgroundColor="orange";
+                document.getElementById(attemptSplit[i]).style.backgroundColor="orange";
+            }
+        }
+    }
+    for(let i=0; i<5; i++){
+        for(let j=0; j<5; j++){
             if(attemptSplit[i]==wordSplit[j] && i==j){
                 document.getElementById(`input${activeLetter-4+i}`).style.backgroundColor="lightgreen";
                 document.getElementById(attemptSplit[i]).style.backgroundColor="lightgreen";
-                i+=1;
-            } else if(attemptSplit[i]==wordSplit[j] && i!==j){
-                document.getElementById(`input${activeLetter-4+i}`).style.backgroundColor="orange";
-                document.getElementById(attemptSplit[i]).style.backgroundColor="orange";
-            } else {}
+            }
         }
     }
     if(word==attempt){

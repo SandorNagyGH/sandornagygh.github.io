@@ -30,7 +30,7 @@
                         <p>Reset stats <button id="resetBtn" onclick="resetStats()">Reset <i class="fa fa-refresh"></i></button></p>
                 </div>
                 <div id="settingsPanel">
-                    <h6 id="GameSet">Settings <button id="hideSettings" onclick="hideSettings()"><i class="fa fa-window-close"></i></button></h6>
+                    <h6 id="GameSet">Settings <button id="hideSettings" onclick="hideSettings(), setInput()"><i class="fa fa-window-close"></i></button></h6>
                     <label for="colorChoice">Color theme
                         <select id="colorChoice" name="colorChoice">
                           <option value="">(select one)</option>
@@ -45,13 +45,13 @@
                         <button id="colorBtn" onclick="setColor(colorChoice.value)">Apply</button>
                     </label>
                     <br/><br/>
-                    <label for="screenChoice">Screen Choice
-                        <select id="inputChoice" name="inputChoice">
-                          <option value="1">Mobile</option>
-                          <option value="2">Monitor</option>
-                        </select>
-                        <button id="inputsetBtn" onclick="setInput(inputChoice.value)">Apply</button>
-                    </label>
+                    <legend>Screen Choice</legend>
+                        <label for="mobile-screen"><input id="mobile-screen" type="radio" name="screenChoice" value="0" checked />Mobile</label>
+                        <label for="monitor-screen"><input id="monitor-screen" type="radio" name="screenChoice" value="1" />Monitor</label>
+                    <br/>
+                    <legend>Music</legend>
+                        <label for="music-choice"><input id="musicOn" type="radio" name="musicChoice" value="musicOn" checked />Music On</label>
+                        <label for="music-choice"><input id="musicOff" type="radio" name="musicChoice" value="musicOff" />Music Off</label>
                 </div>
             </div>
         </header>
