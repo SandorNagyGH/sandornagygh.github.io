@@ -62,7 +62,21 @@ h1, #instruction {
     height: 200px;
     margin: 10px;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+#chart {
+    width: 240px;
+    height: 150px;
+}
+.bar {
+    width: 25px;
+    height: 100px;
+    display: inline-block;
+    background-color: blue;
+    margin: 2px;
+  }
 #resetBtn {
     background-color: var(--theme1);
     border: 1px solid white;

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="WordleByAlex.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+        <script src="https://d3js.org/d3.v7.min.js"></script>
     </head>
     <body>
         <header>
@@ -16,7 +17,7 @@
                 <button id="statsBtn" onclick="statistics()">Stats <i class="fa fa-bar-chart-o"></i></button>
                 <button id="settingsBtn" onclick="settings()"><i class='fa fa-cog'></i></button>
             </h5>
-            <h1>Wordle</h1>
+            <h1 id="fej">Wordle</h1>
             <div id="statsContainer">
                 <div id="statsPanel">
                         <h6 id="GameS">Game Statisitcs <button id="hideStats" onclick="hideStats()"><i class="fa fa-window-close"></i></button></h6>
@@ -24,9 +25,7 @@
                         <p><strong>Win%: </strong><span id="winStat"></span>%</p>
                         <p><strong>Current streak: </span></strong><span id="currentStreak"></span></p>
                         <p><strong>Max streak: </strong><span id="maxStreak"></span></p>
-                        <div id="diagram">Diagram comes here 
-                            <div id="diagramStats"></div>
-                        </div>
+                        <div id="diagram"><div id="chart"></div></div>
                         <p>Reset stats <button id="resetBtn" onclick="resetStats()">Reset <i class="fa fa-refresh"></i></button></p>
                 </div>
                 <div id="settingsPanel">
@@ -196,6 +195,7 @@
             </div>
         </footer>
         <script src="WordleByAlex.js"></script>
+        <script src="d3Chart.js"></script>
     </body>
     <!--© Created by Sandor Nagy-->
 </html>

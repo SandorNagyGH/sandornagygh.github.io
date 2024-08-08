@@ -25,91 +25,99 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
     ["válik", "Valkó", "válla", "valló", "vállú", "válni", "valók", "valós", "váltó", "válva", "vályú", "vámok", "vámon", "vámos", "vámot", "vámőr", "vámút", "Vanda", "Várad", "varas", "várat", "Varbó", "Várda", "Varga", "várja", "varjú", "város", "várva", "Vasad", "vasal", "vasam", "vásár", "vasar", "vasas", "vasat", "vásít", "vasmű", "vasút", "vatta", "vázol", "Vazul", "vécéé", "vedel", "veder", "védés", "végbe", "végem", "végén", "véges", "véget", "végét", "végez", "végig", "végre", "vegre", "végső", "vegul", "végül", "vegye", "vegyi", "végzi", "végző", "Vejti", "vekni", "veled", "velem", "vélem", "velin", "velős", "velum", "velúr", "vénás", "vének", "venné", "venni", "vérbő", "veréb", "véreb", "verem", "veres", "verés", "véres", "veret", "vérét", "verik", "verni", "Veron", "verve", "vérző", "vésés", "véset", "vésőt", "veszi", "veszt", "vészt", "vétek", "vétel", "vetés", "vetet", "vétet", "vetít", "vétót", "vetve", "vevés", "vevők", "vevőt", "vezér", "vezet", "vézna", "vhogy", "vhova", "vhová", "viasz", "vicce", "vidám", "vidék", "vidít", "Vidor", "Vidos", "vidra", "vigad", "vígan", "vigéc", "vigye", "vihar", "vihog", "világ", "Vilja", "villa", "Vilma", "Vinár", "Vince", "vinil", "vinni", "viola", "virág", "virul", "vírus", "visel", "visít", "viskó", "visnu", "vissz", "viszi", "vitae", "vitán", "vitás", "vitat", "vitát", "vitel", "vitéz", "Vitka", "vitla", "vitte", "Vitus", "vívás", "vivés", "vízbe", "vízbő", "vizel", "vízen", "vizes", "vizet", "vizét", "vizez", "vízió", "vízkő", "vízre", "vízum", "vízzé", "vkibe", "vkire", "vlock", "vmely", "vmibe", "vmije", "vmire", "vmivé", "volna", "volod", "volta", "vonal", "vonás", "vonat", "vonít", "vonja", "vonós", "vonót", "vonul", "vonzó", "vödör", "völgy", "vörös", "vskip", "watch", "weben", "webes"],
     ["Xavér", "Xénia", "xilol", "zabál", "Zabar", "zabla", "zabos", "Zádor", "Xavér", "Xénia", "xilol", "zabál", "Zabar", "zabla", "zabos", "Zádor", "zafír", "Zágon", "zajgó", "zajló", "zajos", "Zajta", "Zalán", "zálog", "zamat", "Zámor", "Zanat", "zanót", "zápor", "zárás", "zárat", "zárba", "zárda", "zárja", "zárka", "zárol", "zárul", "zárva", "zavar", "závár", "Závod", "zebra", "Zella", "Zelma", "zenei", "zenés", "zenét", "zengi", "zengő", "zenit", "zepes", "zerge", "zérus", "zetes", "zihál", "Zília", "ziliz", "zizeg", "Zoárd", "Zobor", "zokni", "zokog", "zokon", "Zolna", "Zomba", "zónák", "Zorán", "zorog", "zömít", "zömök", "zönge", "zönög", "zörej", "zörgő", "zörög", "zrubi", "Zsáka", "zsalu", "Zsana", "zsaru", "zselé", "zseni", "Zsérc", "zsett", "zsidó", "Zsira", "Zsóka", "zsoké", "Zsolt", "zsomp", "zsuga", "Zsurk", "zsúrt", "zsüri", "zubog", "zúdít", "zúgás", "zúgón", "zúgva", "zuhan", "zuhog", "zúzás", "zúzda", "zuzmó", "zúzza"]]
 
-    const letter1=document.getElementById("input1")
-    const letter2=document.getElementById("input2")
-    const letter3=document.getElementById("input3")
-    const letter4=document.getElementById("input4")
-    const letter5=document.getElementById("input5")
-    const letter6=document.getElementById("input6")
-    const letter7=document.getElementById("input7")
-    const letter8=document.getElementById("input8")
-    const letter9=document.getElementById("input9")
-    const letter10=document.getElementById("input10")
-    const letter11=document.getElementById("input11")
-    const letter12=document.getElementById("input12")
-    const letter13=document.getElementById("input13")
-    const letter14=document.getElementById("input14")
-    const letter15=document.getElementById("input15")
-    const letter16=document.getElementById("input16")
-    const letter17=document.getElementById("input17")
-    const letter18=document.getElementById("input18")
-    const letter19=document.getElementById("input19")
-    const letter20=document.getElementById("input20")
-    const letter21=document.getElementById("input21")
-    const letter22=document.getElementById("input22")
-    const letter23=document.getElementById("input23")
-    const letter24=document.getElementById("input24")
-    const letter25=document.getElementById("input25")
-    const letter26=document.getElementById("input26")
-    const letter27=document.getElementById("input27")
-    const letter28=document.getElementById("input28")
-    const letter29=document.getElementById("input29")
-    const letter30=document.getElementById("input30")
-    const letter31=document.getElementById("input31")
-    const letter32=document.getElementById("input32")
-    const letter33=document.getElementById("input33")
-    const letter34=document.getElementById("input34")
-    const letter35=document.getElementById("input35")
-    const letter36=document.getElementById("input36")
-    const letter37=document.getElementById("input37")
-    const letter38=document.getElementById("input38")
-    const letter39=document.getElementById("input39")
-    const letter40=document.getElementById("input40")
-    const letter41=document.getElementById("input41")
-    const letter42=document.getElementById("input42")
-    const letter43=document.getElementById("input43")
-    const letter44=document.getElementById("input44")
-    const letter45=document.getElementById("input45")
-    const letter46=document.getElementById("input46")
-    const letter47=document.getElementById("input47")
-    const letter48=document.getElementById("input48")
-    const letter49=document.getElementById("input49")
-    const letter50=document.getElementById("input50")
-    const letter51=document.getElementById("input51")
-    const letter52=document.getElementById("input52")
-    const letter53=document.getElementById("input53")
-    const letter54=document.getElementById("input54")
-    const letter55=document.getElementById("input55")
-    const letter56=document.getElementById("input56")
-    const letter57=document.getElementById("input57")
-    const letter58=document.getElementById("input58")
-    const letter59=document.getElementById("input59")
-    const letter60=document.getElementById("input60")
-    const submitBtn=document.getElementById("submit")
-    const letterElements=document.getElementsByClassName("letters")
-    const alphabet=["a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j", "k", "l", "m", "n", "o", "ó", "ö", "ő", "p", "q", "r", "s", "t", "u", "ú", "ü", "ű", "v", "w", "x", "y", "z"]
-    const regex=/[a-záéíóöőúüű]/
-    let won=0
-    let streak=0
-    let setInp=1
-    let wonStat=[0, 0, 0, 0,0, 0, 0, 0, 0, 0] //[won, lost, current streak, max streak, winfirstattempt, winsecondattempt,...]
-    let attempt=""
-    let numberOfAttempts=0
-    let submitOn=false
-    let tempNum=Math.floor(Math.random()*ListA.length)
-    let word=ListA[tempNum][Math.floor(Math.random()*ListA[tempNum].length)]
-    let wordSplit=word.split('')
-    let activeLetter=1
-    getWonStat()
-    setupGame()
+const letter1=document.getElementById("input1")
+const letter2=document.getElementById("input2")
+const letter3=document.getElementById("input3")
+const letter4=document.getElementById("input4")
+const letter5=document.getElementById("input5")
+const letter6=document.getElementById("input6")
+const letter7=document.getElementById("input7")
+const letter8=document.getElementById("input8")
+const letter9=document.getElementById("input9")
+const letter10=document.getElementById("input10")
+const letter11=document.getElementById("input11")
+const letter12=document.getElementById("input12")
+const letter13=document.getElementById("input13")
+const letter14=document.getElementById("input14")
+const letter15=document.getElementById("input15")
+const letter16=document.getElementById("input16")
+const letter17=document.getElementById("input17")
+const letter18=document.getElementById("input18")
+const letter19=document.getElementById("input19")
+const letter20=document.getElementById("input20")
+const letter21=document.getElementById("input21")
+const letter22=document.getElementById("input22")
+const letter23=document.getElementById("input23")
+const letter24=document.getElementById("input24")
+const letter25=document.getElementById("input25")
+const letter26=document.getElementById("input26")
+const letter27=document.getElementById("input27")
+const letter28=document.getElementById("input28")
+const letter29=document.getElementById("input29")
+const letter30=document.getElementById("input30")
+const letter31=document.getElementById("input31")
+const letter32=document.getElementById("input32")
+const letter33=document.getElementById("input33")
+const letter34=document.getElementById("input34")
+const letter35=document.getElementById("input35")
+const letter36=document.getElementById("input36")
+const letter37=document.getElementById("input37")
+const letter38=document.getElementById("input38")
+const letter39=document.getElementById("input39")
+const letter40=document.getElementById("input40")
+const letter41=document.getElementById("input41")
+const letter42=document.getElementById("input42")
+const letter43=document.getElementById("input43")
+const letter44=document.getElementById("input44")
+const letter45=document.getElementById("input45")
+const letter46=document.getElementById("input46")
+const letter47=document.getElementById("input47")
+const letter48=document.getElementById("input48")
+const letter49=document.getElementById("input49")
+const letter50=document.getElementById("input50")
+const letter51=document.getElementById("input51")
+const letter52=document.getElementById("input52")
+const letter53=document.getElementById("input53")
+const letter54=document.getElementById("input54")
+const letter55=document.getElementById("input55")
+const letter56=document.getElementById("input56")
+const letter57=document.getElementById("input57")
+const letter58=document.getElementById("input58")
+const letter59=document.getElementById("input59")
+const letter60=document.getElementById("input60")
+const submitBtn=document.getElementById("submit")
+const letterElements=document.getElementsByClassName("letters")
+const alphabet=["a", "á", "b", "c", "d", "e", "é", "f", "g", "h", "i", "í", "j", "k", "l", "m", "n", "o", "ó", "ö", "ő", "p", "q", "r", "s", "t", "u", "ú", "ü", "ű", "v", "w", "x", "y", "z"]
+const regex=/[a-záéíóöőúüű]/
+const svg = d3.select("#chart")
+        .append("svg")
+        .attr("width", 240)
+        .attr("height", 150);
+let won=0
+let streak=0
+let setInp=1
+let wonStat=[0, 0, 0, 0] //[won, lost, current streak, max streak]
+let diagramData=[0, 0, 0, 0, 0, 0] //won at x attempt
+let yScale = d3.scaleLinear()
+    .domain([0, d3.max(diagramData, (d) => d)])
+    .range([0, 100]);
+let attempt=""
+let numberOfAttempts=0
+let submitOn=false
+let tempNum=Math.floor(Math.random()*ListA.length)
+let word=ListA[tempNum][Math.floor(Math.random()*ListA[tempNum].length)].toLowerCase()
+let wordSplit=word.split('')
+let activeLetter=1
+setupGame()
+
     
-    
-    function setupGame(){
+function setupGame(){
+    getStats()
         attempt=""
         numberOfAttempts=0
         submitOn=false
         tempNum=Math.floor(Math.random()*ListA.length)
-        word=ListA[tempNum][Math.floor(Math.random()*ListA[tempNum].length)]
+        word=ListA[tempNum][Math.floor(Math.random()*ListA[tempNum].length)].toLowerCase()
         wordSplit=word.split('')
         document.getElementById("playAgain").style.display="none";
         document.getElementById("submit").style.display="block";
@@ -151,61 +159,93 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
             }
             document.getElementById("input31").focus()
         }
+}
+function  playsound(a){
+    if(document.querySelector('input[name="musicChoice"]:checked').value=="musicOff"){
+    }else{
+        a.currentTime = 0;
+        a.play()
     }
-    function setInput(){
-        if(document.querySelector('input[name="screenChoice"]:checked').value=="0"){setInp=1
-            document.getElementById("input-areaB").style.display="none";
-            document.getElementById("input-areaA").style.display="block";
-        }else if(document.querySelector('input[name="screenChoice"]:checked').value=="1"){setInp=2
-            document.getElementById("input-areaA").style.display="none";
-            document.getElementById("input-areaB").style.display="block";
-        }
-        setupGame()
-    }
-    function setColor(colorPair){
-        let colorA=colorPair.split(",")[0]
-        let colorB=colorPair.split(",")[1]
-        document.querySelector(':root').style.setProperty('--theme1', colorA);
-        document.querySelector(':root').style.setProperty('--theme1pair', colorB);
-    }
-    function settings(){
+}
+function settings(){
         document.getElementById("settingsPanel").style.display="block";
         document.getElementById("game-ui").style.display="none";
+}
+function setInput(){
+    if(document.querySelector('input[name="screenChoice"]:checked').value=="0"){setInp=1
+        document.getElementById("input-areaB").style.display="none";
+        document.getElementById("input-areaA").style.display="block";
+    }else if(document.querySelector('input[name="screenChoice"]:checked').value=="1"){setInp=2
+        document.getElementById("input-areaA").style.display="none";
+        document.getElementById("input-areaB").style.display="block";
     }
-    function hideSettings(){
-        document.getElementById("settingsPanel").style.display="none";
-        document.getElementById("game-ui").style.display="block";
-        setupGame()
-    }
-    function  playsound(a){
-        if(document.querySelector('input[name="musicChoice"]:checked').value=="musicOff"){
-        }else{
-            a.currentTime = 0;
-            a.play()
-        }
-    }
-    function getWonStat(){
-        wonStat=localStorage.getItem("wonStat").split(",").map(Number)
-        document.getElementById("wonScore").innerText=wonStat[0]
-        document.getElementById("streakScore").innerText=wonStat[2]
-    }
-    function resetStats(){
-        localStorage.removeItem("wonStat")
-    }
-    function statistics(){
-        document.getElementById("statsPanel").style.display="block";
-        document.getElementById("game-ui").style.display="none";
-        document.getElementById("played").innerHTML=wonStat[0]+wonStat[1]
-        document.getElementById("winStat").innerHTML=Math.floor(wonStat[0]/(wonStat[0]+wonStat[1])*100)
-        document.getElementById("currentStreak").innerHTML=wonStat[2]
-        document.getElementById("maxStreak").innerHTML=wonStat[3]
-        document.getElementById("diagramStats").innerHTML=wonStat[4]+","+wonStat[5]+","+wonStat[6]+","+wonStat[7]+","+wonStat[8]+","+wonStat[9]
-    }
-    function hideStats(){
+    setupGame()
+}
+function setColor(colorPair){
+    let colorA=colorPair.split(",")[0]
+    let colorB=colorPair.split(",")[1]
+    document.querySelector(':root').style.setProperty('--theme1', colorA);
+    document.querySelector(':root').style.setProperty('--theme1pair', colorB);
+}
+function hideSettings(){
+    document.getElementById("settingsPanel").style.display="none";
+    document.getElementById("game-ui").style.display="block";
+    setupGame()
+}
+function statistics(){
+    document.getElementById("statsPanel").style.display="block";
+    document.getElementById("game-ui").style.display="none";
+    document.getElementById("played").innerHTML=wonStat[0]+wonStat[1]
+    document.getElementById("winStat").innerHTML=Math.floor(wonStat[0]/(wonStat[0]+wonStat[1])*100)
+    document.getElementById("currentStreak").innerHTML=wonStat[2]
+    document.getElementById("maxStreak").innerHTML=wonStat[3]
+    
+    yScale = d3.scaleLinear()
+        .domain([0, d3.max(diagramData, (d) => d)])
+        .range([0, 100]);
+    svg.selectAll("rect").remove()
+    svg.selectAll("text").remove()
+    svg.selectAll("rect")
+        .data(diagramData)
+        .enter()
+        .append("rect")
+        .attr("x", (d, i) => i * 40)
+        .attr("y", (d) =>150 - yScale(d))
+        .attr("width", 25)
+        .attr("height", (d, i) => d)
+        .attr("fill", "navy")
+        .attr("class", "bar")
+    svg.selectAll("text")
+        .data(()=>diagramData)
+        .enter()
+        .append("text")
+        .text((d) => d)
+        .attr("x", (d, i) =>5+ (i * 40))
+        .attr("y", (d) =>150 - yScale(d)-3)
+}
+function updateStats(wonStat, diagramData){
+    let stringWonStat=wonStat.map(String).join(",")
+    let stringdiagramData=diagramData.map(String).join(",")
+    localStorage.setItem("wonStat", stringWonStat)
+    localStorage.setItem("diagramData", stringdiagramData)
+}
+function getStats(){
+    wonStat=localStorage.getItem("wonStat").split(",").map(Number)
+    diagramData=localStorage.getItem("diagramData").split(",").map(Number)
+    document.getElementById("wonScore").innerText=wonStat[0]
+    document.getElementById("streakScore").innerText=wonStat[2]
+}
+function resetStats(){
+    localStorage.setItem("wonStat", "0,0,0,0")
+    localStorage.setItem("diagramData", "0,0,0,0,0,0")
+    getStats()
+    statistics()
+}
+function hideStats(){
         document.getElementById("statsPanel").style.display="none"
         document.getElementById("game-ui").style.display="block";
-    }
-    function focusOnNextB(nextLet, val){
+}
+function focusOnNextB(nextLet, val){
         val=val.toLowerCase();
         if(val=="" || regex.test(val)==false){}
         else if(activeLetter==35 || activeLetter==40 || activeLetter==45 || activeLetter==50 || activeLetter==55 || activeLetter==60){}
@@ -213,8 +253,8 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
             playsound(clickSound)
             nextLet.focus()
             activeLetter+=1}
-    }
-    function focusOnPrevB(event, prevLet, val){
+}
+function focusOnPrevB(event, prevLet, val){
         let key=event.key;
         if(activeLetter==31 || activeLetter==36 || activeLetter==41 || activeLetter==46 || activeLetter==51 || activeLetter==56){}
         else if(key=="Backspace" && val==""){playsound(clickSound)
@@ -224,13 +264,13 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
         }else if(key=="Enter" && val!==""){playsound(clickSound)
             checkAnswer();
         }else{}
-    }
-    function activeSubmit(val){
+}
+function activeSubmit(val){
         val=val.toLowerCase();
         if(val=="" || regex.test(val)==false){}
         else{submitBtn.removeAttribute('disabled');}
-    }
-    function handleBtnInput(id){
+}
+function handleBtnInput(id){
         if(submitOn==true){}else{
             playsound(clickSound)
             if(activeLetter==5 || activeLetter==10 || activeLetter==15 || activeLetter==20 || activeLetter==25 || activeLetter==30 ){
@@ -244,8 +284,8 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
                 activeLetter+=1
             }
         }
-    }
-    function focusOnPrev(){
+}
+function focusOnPrev(){
         if(activeLetter==1 || activeLetter==6 || activeLetter==11 || activeLetter==16 || activeLetter==21 || activeLetter==26){} else {
             playsound(clickSound)
             if(submitOn==true){
@@ -259,8 +299,8 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
                 activeLetter-=1
             }
         }
-    }
-    function checkAnswer(){
+}
+function checkAnswer(){
         numberOfAttempts+=1
         submitOn=false
         if(activeLetter==5 || activeLetter==35){console.log(word)}
@@ -308,7 +348,7 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
             if(wonStat[2]==wonStat[3]){wonStat[3]+=1}
             wonStat[0]+=1
             wonStat[2]+=1
-            wonStat[numberOfAttempts+3]+=1
+            diagramData[numberOfAttempts-1]+=1
         }else if((activeLetter==30 || activeLetter==60) && word!==attempt ){
             document.getElementById("congrats").innerText="Ez volt a szó: "+"\n' " + word.toUpperCase() + " '!";
             playsound(gameOver)
@@ -331,10 +371,6 @@ const ListA=[["abban", "Abbás", "abból", "Abbot", "abcúg", "ábécé", "ablak
             }
             activeLetter+=1
         }
-        updateStats(wonStat)
-    }
-    function updateStats(wonStat){
-        let stringWonStat=wonStat.map(String).join(",")
-        localStorage.setItem("wonStat", stringWonStat)
-        getWonStat()
-    }
+        updateStats(wonStat, diagramData)
+        getStats()
+}
