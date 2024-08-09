@@ -90,7 +90,9 @@ let activeLetter=1
 setupGame()
 
 
+
 function setupGame(){
+    playsound(superMario)
     getStats()
     attempt=""
     numberOfAttempts=0
@@ -140,8 +142,9 @@ function setupGame(){
     }
 }
 function  playsound(a){
-    if(document.querySelector('input[name="musicChoice"]:checked').value=="musicOff"){
+    if(document.querySelector('input[name="musicChoice"]:checked').value=="musicOff"){a.pause()
     }else{
+        if(a==superMario){a.loop = true;}
         a.currentTime = 0;
         a.play()
     }
@@ -168,6 +171,7 @@ function setColor(colorPair){
     document.querySelector(':root').style.setProperty('--theme1pair', colorB);
 }
 function hideSettings(){
+    playsound(superMario)
     document.getElementById("settingsPanel").style.display="none";
     document.getElementById("game-ui").style.display="block";
     setupGame()
