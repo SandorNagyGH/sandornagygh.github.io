@@ -24,16 +24,16 @@ h1, h3 {
     height: 90vh;
     width: 100vw;
     display: flex;
-    justify-content: center;  /* Centers the SVG horizontally */
-    align-items: center;      /* Centers the SVG vertically */
-    background-color: #f5f5f5; /* Light gray background to contrast with the map */
+    justify-content: center;  
+    align-items: center;      
+    background-color: #f5f5f5; 
   }
   .county {
-      transition: fill 0.3s ease; /* Smooth transition when the fill color changes */
+      transition: fill 0.3s ease; 
   }
   .county:hover {
-    fill: orange; /* Highlight counties on hover */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    fill: orange; 
+    cursor: pointer; 
   }
   @media only screen and (max-width: 960px) {
     svg{
@@ -41,6 +41,8 @@ h1, h3 {
     }
     #container {
       display: block;
+      width: 960px;
+      height: 600;
     }
     #footer {
       padding-top: 300px;
