@@ -42,9 +42,9 @@ h1, h3 {
     #container {
       display: block;
       width: 960px;
-      height: 600;
+      height: 660;
     }
     #footer {
-      padding-top: 360px;
+      padding-top: 300px;
     }
   }
