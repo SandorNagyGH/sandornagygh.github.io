@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+  }
+h1, h3 {
+    text-align: center;
+}
+  fieldset {
+    border: none;
+  }
+  label {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 2px;
+    color: white;
+  }
+  .input {
+    margin: 5px 0 0 0;
+    width: 100%;
+    min-height: 2em; 
+  }
+  div {
+    padding: 3px 0;
+  }
+  #search-form {
+    padding: 0 20px 20px 20px;
+    width: 80vw;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #1b1b3f;
+  }
+  #search-button {
+    display: flex;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b75;
+    color: white;
+    border-radius: 10px;
+    letter-spacing: 1cap;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+  #search:hover {
+    cursor: pointer;
+  }
+.displayed-name{
+  display: inline-block;
+  width: 25%;
+}
+#displayed-location {
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+  letter-spacing: 1cap;
+}
+#displayed-salary,
+#displayed-total-positive{
+  display: inline-block;
+  width: 10%;
+  background-color: lightgreen;
+}
+#displayed-rent,
+#displayed-emc,
+#displayed-total-negative{
+  display: inline-block;
+  width: 10%;
+  background-color: lightcoral;
+}
+#displayed-empty,
+#displayed-property{
+  display: inline-block;
+  width: 10%;
+}
+#divider-line{
+  background-color: black;
+  height: 1px;
+}

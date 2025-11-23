@@ -1,1 +1,90 @@
-
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="crclStyleSheet.css">
+    </head>
+   <body>
+      <h1 id="title">Capital Requirement</h1>
+      <h3>to cover the</h3>
+      <h1>Cost of Living</h1>
+      <fieldset>
+            <div id="search-form">
+              <label for="favorite-feature">Location</label>
+              <select class="input" id="input-location">
+                <option value="0">Select a location</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Bangkok">Bangkok</option>
+                <option value="Bristol">Bristol</option>
+                <option value="Budapest">Budapest</option>
+                <option value="DaNang">Da Nang</option>
+                <option value="London">London</option>
+                <option value="Manila">Manila</option>
+                <option value="NewYork">New York</option>
+                <option value="Pecs">Pecs</option>
+              </select>
+              <label for="dropdown">Number of people</label>
+              <select class="input" id="input-number-of" name="dropdown">
+                <option value="" disabled>Select the number of indiuviduals living together</option>
+                <option value="1">1</option>
+                 <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <label for="dropdown">Property ownership type</label>
+              <select class="input" id="input-ownership-type">
+                <option disabled value="0">Select property type</option>
+                <option value="rent">Rented property</option>
+                <option value="own">Own property</option>
+              </select>
+              <label for="dropdown">City centre location</label>
+              <select class="input" id="input-city-centre">
+                <option disabled value="0">Select within city location</option>
+                <option value="city-centre">City centre</option>
+                <option value="outskirts">Outskirts</option>
+              </select>
+              <label for="dropdown">Currency</label>
+              <select class="input" id="input-ccurrency">
+                <option value="0">Local currency</option>
+                <option value="USD">US Dollar</option>
+                <option value="GBP">British Pound</option>
+                <option value="EUR">Euro</option>
+                <option value="HUF">Hungarian Forint</option>
+                <option value="PHP">Philippine Peso</option>
+                <option value="VND">Vietnamese Dhong</option>
+                <option value="THB">Thai Baht</option>
+              </select>
+              <button id="search-button">Search</button>
+            </div>
+          </fieldset>
+          <span class="displayed-name">Location:</span>
+          <span id="displayed-location"></span>
+          <p></p>
+          <span class="displayed-name", id="displayed-property-name"></span>
+          <span id="displayed-property"></span>
+          <p></p>
+          <span class="displayed-name">Average monthly salary:</span>
+          <span id="displayed-salary"></span>
+          <p></p>
+          <span class="displayed-name", id="displayed-emc-name">Estimated monthly costs:</span>
+          <span id="displayed-empty"></span>
+          <span id="displayed-emc"></span>
+          <p></p>
+          <span class="displayed-name", id="displayed-rent-name"></span>
+          <span id="displayed-empty"></span>
+          <span id="displayed-rent"></span>
+          <p id="divider-line"></p>
+          <span class="displayed-name", id="displayed-total-name">Total monthly cash-flow:</span>
+          <span id="displayed-total-positive"></span>
+          <span id="displayed-total-negative"></span>
+          <p></p>
+          
+      <div id="footer">
+        <p>Source: <a href=""></a></p>
+        <span id="source"></span>
+        <p>Created by <a href="https://sandornagygh.github.io/">Alex Sandor Nagy</a></p>
+      </div>
+     <script src="crclCalculator.js"></script>
+    </body>
+    <!--© Created by Sandor Nagy-->
+</html>
