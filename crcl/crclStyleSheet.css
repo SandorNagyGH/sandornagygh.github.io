@@ -23,7 +23,8 @@ h1, h3 {
   div {
     padding: 3px 0;
   }
-  #search-form {
+  #search-form,
+  #input-form {
     padding: 0 20px 20px 20px;
     width: 80vw;
     min-width: 300px;
@@ -31,7 +32,8 @@ h1, h3 {
     margin: 0 auto;
     background-color: #1b1b3f;
   }
-  #search-button {
+  #search-button,
+  #calculate-button {
     display: flex;
     width: 60%;
     margin: 1em auto;
@@ -45,38 +47,52 @@ h1, h3 {
     justify-content: center;
     align-items: center;
   }
-  #search:hover {
+  button:hover {
     cursor: pointer;
   }
 .displayed-name{
   display: inline-block;
-  width: 25%;
+  width: 30%;
 }
 #displayed-location {
   display: inline-block;
-  width: 20%;
+  width: 30%;
   text-align: center;
   letter-spacing: 1cap;
 }
 #displayed-salary,
 #displayed-total-positive{
   display: inline-block;
-  width: 10%;
+  width: 15%;
+  text-align: end;
   background-color: lightgreen;
 }
 #displayed-rent,
 #displayed-emc,
 #displayed-total-negative{
   display: inline-block;
-  width: 10%;
+  width: 15%;
   background-color: lightcoral;
 }
 #displayed-empty,
 #displayed-property{
   display: inline-block;
-  width: 10%;
+  width: 15%;
 }
-#divider-line{
+.divider-line{
   background-color: black;
   height: 1px;
+}
+.displayed-local-crcl,
+.displayed-personal-crcl{
+  display: none;
+  padding-right: 2px;
+}
+#local-crcl4,
+#personal-crcl3 {
+  background-color: lightgreen;
+}
+#personal-crcl1,
+#personal-crcl2 {
+  background-color: lightcoral;
 }

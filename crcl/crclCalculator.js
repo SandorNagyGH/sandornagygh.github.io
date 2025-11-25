@@ -4,7 +4,11 @@ const searchInputNumber=document.getElementById("input-number-of");
 const searchInputOwnershipType=document.getElementById("input-ownership-type");
 const searchInputCityCentre=document.getElementById("input-city-centre");
 const searchInputCurrency=document.getElementById("input-ccurrency");
+const calcInputCurrency=document.getElementById("input-ccurrency2");
 const searchBtn=document.getElementById("search-button");
+const calcInputCol=document.getElementById("input-col");
+const calcInputCoh=document.getElementById("input-coh");
+const calculateBtn=document.getElementById("calculate-button");
 const displayedLocation=document.getElementById("displayed-location");
 const displayedCurrency=document.getElementById("displayed-currency");
 const displayedSalary=document.getElementById("displayed-salary");
@@ -16,28 +20,33 @@ const displayedPropertyName=document.getElementById("displayed-property-name");
 const displayedProperty=document.getElementById("displayed-property");
 const displayedTotalP=document.getElementById("displayed-total-positive");
 const displayedTotalN=document.getElementById("displayed-total-negative");
-var localCurrency
-var appliedCurrency
+const displayedLocalCrclLocation=document.getElementById("local-crcl1");
+const displayedLocalCrclNr=document.getElementById("local-crcl2");
+const displayedHousingName=document.getElementById("local-crcl-housing");
+const displayedLocalCrclLoc=document.getElementById("local-crcl3");
+const displayedLocalCrclAmount=document.getElementById("local-crcl4");
+const displayedPersonalCol=document.getElementById("personal-crcl1");
+const displayedPersonalCoh=document.getElementById("personal-crcl2");
+const displayedPersonalCrcl=document.getElementById("personal-crcl3");
+var localCurrency, appliedCurrency, personalCurrency
 var appCurrExchangeRate=1
-var averageSalary
-var averageEmc
-var averageEmc4
-var emcCalc
-var averageRent1CC
-var averageRent1S
-var averageRent3CC
-var averageRent3S
-var rentCalc
-var averagePropertyPriceCC
-var averagePropertyPriceS
-var propCalc
-var totalCalc
+var averageSalary, averageEmc, averageEmc4
+var averageRent1CC, averageRent1S, averageRent3CC, averageRent3S
+var emcCalc, rentCalc, propCalc, totalCalc, localCrcl
+var averagePropertyPriceCC, averagePropertyPriceS
+var personalCol, personalCoh, personalCrcl
 
 function fetchData() {
     if (searchInputLocation.value==="0"){
         alert("Please select a location.");
     } else {
         displayedLocation.textContent=searchInputLocation.value
+        displayedLocalCrclLocation.textContent=searchInputLocation.value
+        displayedLocalCrclNr.textContent=searchInputNumber.value
+        document.querySelectorAll('.displayed-local-crcl').forEach(el => {
+            el.style.display = 'inline-block';
+        });
+
 
         fetch(`https://raw.githubusercontent.com/SandorNagyGH/crcl/refs/heads/main/${searchInputLocation.value}.json`)
         .then((res)=>{
@@ -86,24 +95,33 @@ function fetchExchangeRate() {
 
 function formatData(curr, amount){
     return new Intl.NumberFormat('en-GB', {style: 'currency',
-        currency: curr,}).format(amount);
+        currency: curr, minimumFractionDigits: 0, maximumFractionDigits: 0,}).format(amount);
 }
 
 function displayData(){
     emcCalc=0
     rentCalc=0
     propCalc=0
+    if(searchInputCityCentre.value=="city-centre"){
+        displayedLocalCrclLoc.textContent="city center"
+    } else {
+        displayedLocalCrclLoc.textContent="outskirts"
+    }
     if(searchInputOwnershipType.value=="rent"){
         displayedPropertyName.style.display = "none";
         displayedProperty.style.display = "none";
         displayedRentName.style.display = "inline-block";
         displayedRent.style.display = "inline-block";
+        displayedLocalCrclLoc.style.display = "inline-block";
+        displayedHousingName.style.display = "inline-block";
     }
     if(searchInputOwnershipType.value=="own"){
         displayedRentName.style.display = "none";
         displayedRent.style.display = "none";
         displayedPropertyName.style.display = "inline-block";
         displayedProperty.style.display = "inline-block";
+        displayedLocalCrclLoc.style.display = "none";
+        displayedHousingName.style.display = "none";
     }
     if(searchInputNumber.value=="1"){
         displayedEmcName.textContent="Estimated monthly costs for a single person:"
@@ -193,10 +211,12 @@ function displayData(){
     emcCalc=emcCalc*appCurrExchangeRate
     rentCalc=rentCalc*appCurrExchangeRate
     propCalc=propCalc*appCurrExchangeRate
+    localCrcl=(emcCalc+rentCalc)*12/0.06
     displayedSalary.textContent=formatData(appliedCurrency, averageSalary)
     displayedEmc.textContent=formatData(appliedCurrency, emcCalc)
     displayedRent.textContent=formatData(appliedCurrency, rentCalc)
     displayedProperty.textContent=formatData(appliedCurrency, propCalc)
+    displayedLocalCrclAmount.textContent=formatData(appliedCurrency, localCrcl)
     calculateTotal()
 }
 
@@ -210,5 +230,19 @@ function calculateTotal(){
         displayedTotalN.textContent=formatData(appliedCurrency, totalCalc)
     }
 }
+function calculatePersonalCrcl(){
+    personalCurrency=calcInputCurrency.value
+    personalCol=Number(calcInputCol.value)
+    displayedPersonalCol.textContent=formatData(personalCurrency, personalCol)
+    personalCoh=Number(calcInputCoh.value)
+    displayedPersonalCoh.textContent=formatData(personalCurrency, personalCoh)
+    personalCrcl=(personalCol+personalCoh)*12/0.06
+    displayedPersonalCrcl.textContent=formatData(personalCurrency, personalCrcl)
+    document.querySelectorAll('.displayed-personal-crcl').forEach(el => {
+            el.style.display = 'inline-block';
+        });
+    
+}
 
 searchBtn.addEventListener("click", fetchData);
+calculateBtn.addEventListener("click", calculatePersonalCrcl);

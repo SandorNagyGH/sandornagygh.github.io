@@ -5,9 +5,6 @@
         <link rel="stylesheet" href="crclStyleSheet.css">
     </head>
    <body>
-      <h1 id="title">Capital Requirement</h1>
-      <h3>to cover the</h3>
-      <h1>Cost of Living</h1>
       <fieldset>
             <div id="search-form">
               <label for="favorite-feature">Location</label>
@@ -56,7 +53,7 @@
               </select>
               <button id="search-button">Search</button>
             </div>
-          </fieldset>
+      </fieldset>
           <span class="displayed-name">Location:</span>
           <span id="displayed-location"></span>
           <p></p>
@@ -73,18 +70,53 @@
           <span class="displayed-name", id="displayed-rent-name"></span>
           <span id="displayed-empty"></span>
           <span id="displayed-rent"></span>
-          <p id="divider-line"></p>
+          <p class="divider-line"></p>
           <span class="displayed-name", id="displayed-total-name">Total monthly cash-flow:</span>
           <span id="displayed-total-positive"></span>
           <span id="displayed-total-negative"></span>
           <p></p>
-          
+      <h1 id="title">Capital Requirement</h1>
+      <h3>to cover the</h3>
+      <h1>Cost of Living</h1>
+      <span class="displayed-local-crcl">Without a salary in </span>
+      <span class="displayed-local-crcl", id="local-crcl1"></span>
+      <span class="displayed-local-crcl">, to cover the Cost of Living for </span>
+      <span class="displayed-local-crcl", id="local-crcl2"></span>
+      <span class="displayed-local-crcl", id="local-crcl-housing">, and to cover the Cost of housing in the </span>
+      <span class="displayed-local-crcl", id="local-crcl3">city center</span>
+      <span class="displayed-local-crcl">, you will need an estimated invested amount of: </span>
+      <span class="displayed-local-crcl", id="local-crcl4"></span>
+      <p></p>
+      <fieldset>
+        <div id="input-form">
+          <label id="name-label" for="col">Cost of Living</label><input class="input" id="input-col" type="number" placeholder="Enter your cost of living" required />
+          <label id="name-label" for="coh">Cost of housing(Rent or mortgage)</label><input class="input" id="input-coh" type="number" placeholder="Enter your rent or mortgage" />
+          <label for="dropdown">Currency</label>
+              <select class="input" id="input-ccurrency2">
+                <option value="USD">US Dollar</option>
+                <option value="GBP">British Pound</option>
+                <option value="EUR">Euro</option>
+                <option value="HUF">Hungarian Forint</option>
+                <option value="PHP">Philippine Peso</option>
+                <option value="VND">Vietnamese Dhong</option>
+                <option value="THB">Thai Baht</option>
+              </select>
+          <button id="calculate-button">Calculate</button>
+        </div>
+      </fieldset>
+      <span class="displayed-personal-crcl">To cover your Cost of Living of </span>
+      <span class="displayed-personal-crcl", id="personal-crcl1"></span>
+      <span class="displayed-personal-crcl">, and the Cost of housing of </span>
+      <span class="displayed-personal-crcl", id="personal-crcl2"></span>
+      <span class="displayed-personal-crcl">, you will need an estimated invested amount of: </span>
+      <span class="displayed-personal-crcl", id="personal-crcl3"></span>
+      <p class="divider-line"></p>
       <div id="footer">
         <p>Source: <a href=""></a></p>
         <span id="source"></span>
         <p>Created by <a href="https://sandornagygh.github.io/">Alex Sandor Nagy</a></p>
       </div>
-     <script src="crclCalculator.js"></script>
+      <script src="crclCalculator.js"></script>
     </body>
     <!--© Created by Sandor Nagy-->
 </html>
