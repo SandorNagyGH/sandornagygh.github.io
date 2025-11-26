@@ -20,8 +20,10 @@ h1, h3 {
     width: 100%;
     min-height: 2em; 
   }
-  div {
-    padding: 3px 0;
+  .input2 {
+    display: inline-block;
+    width: 48%;
+    min-height: 2em; 
   }
   #search-form,
   #input-form {
@@ -32,8 +34,7 @@ h1, h3 {
     margin: 0 auto;
     background-color: #1b1b3f;
   }
-  #search-button,
-  #calculate-button {
+  button {
     display: flex;
     width: 60%;
     margin: 1em auto;
@@ -52,7 +53,7 @@ h1, h3 {
   }
 .displayed-name{
   display: inline-block;
-  width: 30%;
+  width: 60%;
 }
 #displayed-location {
   display: inline-block;

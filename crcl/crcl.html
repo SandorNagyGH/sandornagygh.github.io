@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="crclStyleSheet.css">
     </head>
    <body>
+      <h1>Cost of Living and Cost of Housing</h1>
+      <h3>around the world</h3>
       <fieldset>
             <div id="search-form">
               <label for="favorite-feature">Location</label>
@@ -75,32 +77,44 @@
           <span id="displayed-total-positive"></span>
           <span id="displayed-total-negative"></span>
           <p></p>
-      <h1 id="title">Capital Requirement</h1>
+      <h1>Capital Requirement</h1>
       <h3>to cover the</h3>
-      <h1>Cost of Living</h1>
+      <h1>Cost of Living and Cost of Housing</h1>
       <span class="displayed-local-crcl">Without a salary in </span>
       <span class="displayed-local-crcl", id="local-crcl1"></span>
       <span class="displayed-local-crcl">, to cover the Cost of Living for </span>
       <span class="displayed-local-crcl", id="local-crcl2"></span>
       <span class="displayed-local-crcl", id="local-crcl-housing">, and to cover the Cost of housing in the </span>
-      <span class="displayed-local-crcl", id="local-crcl3">city center</span>
+      <span class="displayed-local-crcl", id="local-crcl3">city centre</span>
       <span class="displayed-local-crcl">, you will need an estimated invested amount of: </span>
       <span class="displayed-local-crcl", id="local-crcl4"></span>
       <p></p>
+      <p class="divider-line"></p>
+      <h3>Set your own numbers</h3>
       <fieldset>
         <div id="input-form">
           <label id="name-label" for="col">Cost of Living</label><input class="input" id="input-col" type="number" placeholder="Enter your cost of living" required />
           <label id="name-label" for="coh">Cost of housing(Rent or mortgage)</label><input class="input" id="input-coh" type="number" placeholder="Enter your rent or mortgage" />
-          <label for="dropdown">Currency</label>
-              <select class="input" id="input-ccurrency2">
-                <option value="USD">US Dollar</option>
-                <option value="GBP">British Pound</option>
-                <option value="EUR">Euro</option>
-                <option value="HUF">Hungarian Forint</option>
-                <option value="PHP">Philippine Peso</option>
-                <option value="VND">Vietnamese Dhong</option>
-                <option value="THB">Thai Baht</option>
-              </select>
+          <div class="input2">
+            <label for="dropdown">Currency</label>
+            <select id="input-ccurrency2">
+                <option value="USD">USD</option>
+                <option value="GBP">GBP</option>
+                <option value="EUR" selected>EUR</option>
+                <option value="HUF">HUF</option>
+                <option value="PHP">PHP</option>
+                <option value="VND">VND</option>
+                <option value="THB">THB</option>
+            </select>
+          </div>
+          <div class="input2">
+            <label for="dropdown">Return on Investment</label>
+            <select id="input-roi">
+                <option value="0.05">5%</option>
+                <option value="0.06" selected>6%</option>
+                <option value="0.07">7%</option>
+            </select>
+          </div>
           <button id="calculate-button">Calculate</button>
         </div>
       </fieldset>

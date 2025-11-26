@@ -8,6 +8,7 @@ const calcInputCurrency=document.getElementById("input-ccurrency2");
 const searchBtn=document.getElementById("search-button");
 const calcInputCol=document.getElementById("input-col");
 const calcInputCoh=document.getElementById("input-coh");
+const calcInputRoi=document.getElementById("input-roi");
 const calculateBtn=document.getElementById("calculate-button");
 const displayedLocation=document.getElementById("displayed-location");
 const displayedCurrency=document.getElementById("displayed-currency");
@@ -236,12 +237,11 @@ function calculatePersonalCrcl(){
     displayedPersonalCol.textContent=formatData(personalCurrency, personalCol)
     personalCoh=Number(calcInputCoh.value)
     displayedPersonalCoh.textContent=formatData(personalCurrency, personalCoh)
-    personalCrcl=(personalCol+personalCoh)*12/0.06
+    personalCrcl=(personalCol+personalCoh)*12/calcInputRoi.value
     displayedPersonalCrcl.textContent=formatData(personalCurrency, personalCrcl)
     document.querySelectorAll('.displayed-personal-crcl').forEach(el => {
             el.style.display = 'inline-block';
         });
-    
 }
 
 searchBtn.addEventListener("click", fetchData);
