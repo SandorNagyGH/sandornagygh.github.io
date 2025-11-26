@@ -71,10 +71,17 @@ ul {
     margin: 0 auto;
     margin-bottom: 4rem;
   }
-  .show {
+  .hidden-projects {
+    display: none;
+  }
+  button {
     background-color: #3a3a40;
     padding: 1rem;
     border-radius: 1px;
+    color: white;
+  }
+  button:hover {
+    cursor: pointer;
   }
   .proba {
     height: 0;
@@ -112,26 +119,9 @@ h2 {
   }
   .social-links {
     display: flex;
-    justify-content: center;
-    margin-top: 100px;
-  }
-  .social-link-batch {
-    display: flex;
-    width: 300px;
-  }
-  .social-link-batch a {
-    padding: 20px 10px;
-    width: 150px;
-  }
-  @media only screen and (max-width: 599px) {
-    .social-links {
-      display: inline-block;
-      margin: 50px;
-    }
-    .social-link-batch {
-      width: 300px;
-      margin: 0 auto;
-    }
+    justify-content: space-evenly;
+    width: 40%;
+    margin: 50px auto;
   }
   i {
     padding: 0 5px;
