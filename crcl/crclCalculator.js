@@ -140,7 +140,7 @@ function displayData(){
                 displayedPropertyName.textContent="Average price of a 50m² 1 bed apartment in "+searchInputLocation.value+" city centre:"
                 propCalc=averagePropertyPriceCC*50
             } else {
-                displayedPropertyName.textContent="Average price of a 50m² 1 bed partment in the outskirts of "+searchInputLocation.value+":"
+                displayedPropertyName.textContent="Average price of a 50m² 1 bed apartment in the outskirts of "+searchInputLocation.value+":"
                 propCalc=averagePropertyPriceS*50
             }
         }
@@ -245,4 +245,5 @@ function calculatePersonalCrcl(){
 }
 
 searchBtn.addEventListener("click", fetchData);
+
 calculateBtn.addEventListener("click", calculatePersonalCrcl);
