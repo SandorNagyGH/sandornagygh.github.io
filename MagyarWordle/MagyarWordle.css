@@ -1,1 +1,191 @@
-
+:root {
+    --theme1: #B39EB5;
+    --theme1pair: purple;
+}
+body {
+    background-color: var(--theme1);
+}
+h5 {
+    text-align: right;
+    margin: 10px 0 0 0;
+}
+#wonScore, #streakScore {
+    padding-right: 20px;
+}
+#statsBtn, #settingsBtn {
+    background-color: var(--theme1pair);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin-right: 20px;
+}
+h1, #instruction {
+    text-align: center;
+}
+#statsContainer {
+    display: flex;
+    justify-content: center;
+}
+#statsPanel, #settingsPanel {
+    width: 300px;
+    height: 400px;
+    background-color: var(--theme1pair);
+    display: none;
+    margin-top: 50px;
+}
+#GameS, #GameSet {
+    height: 30px;
+    font-size: 24px;
+    color: white;
+    text-align: right;
+    margin: 0;
+    margin-bottom: 20px;
+}
+#hideStats, #hideSettings {
+    height: 30px;
+    font-size: 30px;
+    color: white;
+    background-color: var(--theme1pair);
+    border: none;
+    margin-left: 50px;
+}
+#statsPanel p {
+    margin-top: 10px;
+}
+#statsPanel strong {
+    padding-left: 10px;
+    color: white;
+    width: 150px;
+}
+#diagram {
+    width: 280px;
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#chart {
+    width: 240px;
+    height: 150px;
+}
+.bar {
+    width: 25px;
+    height: 100px;
+    display: inline-block;
+    background-color: blue;
+    margin: 2px;
+}
+#resetBtn {
+    background-color: var(--theme1);
+    border: 1px solid white;
+    border-radius: 5px;
+}
+#settingsPanel {
+    padding-left: 5px;
+}
+label {
+    margin-top: 20px;
+}
+#game-ui {
+    height: 86vh;
+}
+#input-areaB {
+    display: none;
+}
+#attempt-one-area, #attempt-two-area, #attempt-three-area, #attempt-four-area, #attempt-five-area,  #attempt-six-area,
+#btns-line-one, #btns-line-two, #btns-line-three, #btns-line-four,
+#attempt-one-areaB, #attempt-two-areaB, #attempt-three-areaB, #attempt-four-areaB, #attempt-five-areaB, #attempt-six-areaB {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+.attLin {
+    text-align: center;
+    border: lightgrey;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    border-radius: 5px;
+    font-size: 24px;
+}
+.attemptLine1 {
+    background-color: white;
+}
+.attemptLine2, .attemptLine3, .attemptLine4, .attemptLine5, .attemptLine6 {
+    background-color: rgba(239, 239, 239, 0.3);
+}
+#input1 {
+    border: 2px solid black;
+}
+#submitdiv {
+    display: flex;
+    justify-content: center;
+}
+#submit {
+    margin: 30px;
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    height: 40px;
+    background-color: var(--theme1pair);
+    color: white;
+}
+#playAgain {
+    margin: 40px;
+    border: none;
+    border-radius: 20px;
+    width: 140px;
+    height: 40px;
+    background-color: var(--theme1pair);
+    color: white;
+    display: none;
+}
+button:hover, .letters:hover {
+    cursor: pointer;
+}
+#letter-btn-area {
+    padding-bottom: 30px;
+}
+.letters {
+    background-color: lightgrey;
+    border: 1px solid black;
+    width: 30px;
+    height: 40px;
+    margin: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--theme1);
+}
+#divider {
+    background-color: black;
+    height: 1px;
+    width: 100%;
+}
+p {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+}
+@media only screen and (max-width: 420px) {
+    #submit {
+        margin: 10px;
+    }
+    #btns-line-one, #btns-line-two, #btns-line-three, #btns-line-four {
+        margin: 10px 0;
+    }
+    .letters {
+        margin: 0 2px;
+    }
+    footer {
+        position: relative;
+    }
+}
