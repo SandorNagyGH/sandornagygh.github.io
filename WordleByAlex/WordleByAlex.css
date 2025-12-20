@@ -1,6 +1,6 @@
 :root {
-    --theme1: #B39EB5;
-    --theme1pair: purple;
+    --theme1: lightblue;
+    --theme1pair: blue;
 }
 body {
     background-color: var(--theme1);
