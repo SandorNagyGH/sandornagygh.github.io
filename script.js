@@ -2,10 +2,11 @@ const projects = [
     { img: "https://i.postimg.cc/yYVkvKPB/Crcl.jpg", name: "CRCL", link: "https://sandornagygh.github.io/crcl/crcl.html", qr:"https://i.postimg.cc/SNyJD4rh/Crcl_QR.jpg" },
     { img: "https://i.postimg.cc/659yYK0W/Wordle.jpg", name: "Wordle Game", link: "./WordleByAlex/WordleByAlex.html", qr:"https://i.postimg.cc/28zV2Ywj/Wordle_Qr.png" },
     { img: "https://i.postimg.cc/rF8KQTJ8/Usa_Population.png", name: "Choropleth map of Usa", link: "./UsaPopulation/UsaPopulation.html", qr:"https://i.postimg.cc/KvZRJbNx/Usa_Qr.png" },
+    { img: "https://i.postimg.cc/ry0HKXBz/Magyar-Wordle-Image.png", name: "Magyar Wordle", link: "./MagyarWordle/MagyarWordle.html" },
+    { img: "https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png", name: "Random quoteMachine", link: "#" },
     { img: "https://i.postimg.cc/ncHC0xkh/Wordle_Solver.jpg", name: "Wordle Solver", link: "./WordleSolver/wordleSolver.html", qr:"https://i.postimg.cc/5Nnjrr7V/Wordle_Solver_Qr.png" },
     { img: "https://i.postimg.cc/659yYK0K/Drum_Machine.png", name: "Drum Machine", link: "./DrumMachine/DrumMachine.html", qr:"https://i.postimg.cc/ncHC0xkt/Drum_Machine_Qr.png" },
-    { img: "https://i.postimg.cc/ry0HKXBz/Magyar-Wordle-Image.png", name: "Magyar Wordle", link: "./MagyarWordle/MagyarWordle.html" },
-    { img: "https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png", name: "Random quoteMachine", link: "#" }
+    
 ];
 
 let currentIndex = 0;
