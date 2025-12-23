@@ -18,6 +18,10 @@ const projectLink = document.getElementById('project-link');
 const qrImg = document.getElementById('qr-img');
 const prevNav = document.querySelector('.prev-nav');
 const nextNav = document.querySelector('.next-nav');
+const leftArrow = document.getElementById('left-arrow');
+const rightArrow = document.getElementById('right-arrow');
+const leftNav = document.querySelector('.left-nav');
+const rightNav = document.querySelector('.right-nav');
 
 function updateCarousel() {
     setTimeout(() => {
@@ -27,18 +31,6 @@ function updateCarousel() {
         qrImg.src = projects[currentIndex].qr || '';
         
         if(direction == 'next'){ 
-            nextNav.animate([
-                { transform: 'translateX(-10vw) scale(2)', opacity: 0.75 },
-                { transform: 'translateX(0) scale(1)', opacity: 0.5 }
-            ], { duration: 500, fill: 'forwards' });
-            projectImg.animate([
-                { transform: 'translateX(-22vw) scale(0.5)', opacity: 0.75 },
-                { transform: 'translateX(0) scale(1)', opacity: 1 }
-            ], { duration: 500, fill: 'forwards' });
-            prevNav.animate([
-                { transform: 'translateX(-20vw)' },
-                { transform: 'translateX(0)' }
-            ], { duration: 500, fill: 'forwards' });
             setTimeout(() => {
                 qrImg.animate([
                 { transform: 'translateX(-50vw)',opacity: 0},
@@ -47,18 +39,6 @@ function updateCarousel() {
             }, 500);
         }
         if(direction == 'prev'){
-            prevNav.animate([
-                { transform: 'translateX(10vw) scale(2)', opacity: 0.75 },
-                { transform: 'translateX(0) scale(1)', opacity: 0.5 }
-            ], { duration: 500, fill: 'forwards' });
-            projectImg.animate([
-                { transform: 'translateX(20vw) scale(0.5)', opacity: 0.75 },
-                { transform: 'translateX(0) scale(1)', opacity: 1 }
-            ], { duration: 500, fill: 'forwards' });
-            nextNav.animate([
-                { transform: 'translateX(20vw)' },
-                { transform: 'translateX(0)' }
-            ], { duration: 500, fill: 'forwards' });
             setTimeout(() => {
                 qrImg.animate([
                     { transform: 'translateX(50vw)',opacity: 0 },
@@ -71,60 +51,46 @@ function updateCarousel() {
         prevNav.src = projects[prevIndex].img;
         prevNav.setAttribute('data-index', prevIndex);
 
+        const leftIndex = (currentIndex - 2 + projects.length) % projects.length;
+        leftNav.src = projects[leftIndex].img;
+        leftNav.setAttribute('data-index', leftIndex);
+
         const nextIndex = (currentIndex + 1) % projects.length;
         nextNav.src = projects[nextIndex].img;
         nextNav.setAttribute('data-index', nextIndex);
+
+        const rightIndex = (currentIndex + 2) % projects.length;
+        rightNav.src = projects[rightIndex].img;
+        rightNav.setAttribute('data-index', rightIndex);
     }, 500);
 }
-
-prevNav.addEventListener('click', () => {
-    prevNav.animate([
-        { transform: 'translateX(0)' },
-        { transform: 'translateX(-20vw)' }
-    ], { duration: 500, fill: 'forwards' });
-    projectImg.animate([
-        { transform: 'translateX(0) scale(1)', opacity: 1 },
-        { transform: 'translateX(-22vw) scale(0.5)', opacity: 0.75 }
-    ], { duration: 500, fill: 'forwards' });
-    nextNav.animate([
-        { transform: 'translateX(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(-10vw) scale(2)', opacity: 0.75 }
-    ], { duration: 500, fill: 'forwards' });
-    setTimeout(() => {
-        qrImg.animate([
-            { transform: 'translateX(0)',opacity: 1  },
-            { transform: 'translateX(-50vw)',opacity: 0 }
-        ], { duration: 250, fill: 'forwards' });
-    }, 400);
-    
-    direction = 'prev';
-    if(currentIndex == projects.length - 1){
-        currentIndex = 0
-    } else {
-        currentIndex = currentIndex + 1;
-    }
-    updateCarousel();
-});
-
-nextNav.addEventListener('click', () => {
-    nextNav.animate([
+function moveRight(){
+    rightNav.animate([
         { transform: 'translateX(0)' },
         { transform: 'translateX(20vw)' }
-    ], { duration: 500, fill: 'forwards' });
+    ], { duration: 500 });
+    nextNav.animate([
+        { transform: 'translateX(0) scale(1)',  },
+        { transform: 'translateX(14vw) scale(0.5)', opacity: 0.25 }
+    ], { duration: 500 });
     projectImg.animate([
-        { transform: 'translateX(0) scale(1)', opacity: 1 },
-        { transform: 'translateX(22vw) scale(0.5)', opacity: 0.75 }
-    ], { duration: 500, fill: 'forwards' });
+        { transform: 'translateX(0)translateY(0) scale(1)', opacity: 1 },
+        { transform: 'translateX(36vw)translateY(25px) scale(0.2)', opacity: 0.5 }
+    ], { duration: 500 });
     prevNav.animate([
-        { transform: 'translateX(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(10vw) scale(2)', opacity: 0.75 }
-    ], { duration: 500, fill: 'forwards' });
+        { transform: 'translateX(0)translateY(0) scale(1)', opacity: 0.5 },
+        { transform: 'translateX(36vw)translateY(-30px) scale(5)', opacity: 1 }
+    ], { duration: 500 });
+    leftNav.animate([
+        { transform: 'translateX(0) scale(1)', opacity: 0.25 },
+        { transform: 'translateX(14vw) scale(2)', opacity: 0.5 }
+    ], { duration: 500 });
     setTimeout(() => {
         qrImg.animate([
             { transform: 'translateX(0)',opacity: 1 },
             { transform: 'translateX(50vw)',opacity: 0}
         ], { duration: 250, fill: 'forwards' });
-    }, 400);
+    }, 300);
 
     direction = 'next';
     if(currentIndex == 0){
@@ -133,6 +99,55 @@ nextNav.addEventListener('click', () => {
         currentIndex = currentIndex - 1;
     }
     updateCarousel();
+}
+function moveLeft(){
+    leftNav.animate([
+        { transform: 'translateX(0)' },
+        { transform: 'translateX(-20vw)' }
+    ], { duration: 500});
+    prevNav.animate([
+        { transform: 'translateX(0) scale(1)', opacity: 0.5 },
+        { transform: 'translateX(-14vw) scale(0.5)', opacity: 0.25 }
+    ], { duration: 500 });
+    projectImg.animate([
+        { transform: 'translateX(0)translateY(0) scale(1)', opacity: 1 },
+        { transform: 'translateX(-36vw)translateY(25px) scale(0.2)', opacity: 0.5 }
+    ], { duration: 500 });
+    nextNav.animate([
+        { transform: 'translateX(0)translateY(0) scale(1)', opacity: 0.5 },
+        { transform: 'translateX(-36vw)translateY(-30px) scale(5)', opacity: 1 }
+    ], { duration: 500});
+    rightNav.animate([
+        { transform: 'translateX(0) scale(1)', opacity: 0.25 },
+        { transform: 'translateX(-14vw) scale(2)', opacity: 0.5 }
+    ], { duration: 500});
+    setTimeout(() => {
+        qrImg.animate([
+            { transform: 'translateX(0)',opacity: 1  },
+            { transform: 'translateX(-50vw)',opacity: 0 }
+        ], { duration: 250, fill: 'forwards' });
+    }, 300);
+    
+    direction = 'prev';
+    if(currentIndex == projects.length - 1){
+        currentIndex = 0
+    } else {
+        currentIndex = currentIndex + 1;
+    }
+    updateCarousel();
+}
+prevNav.addEventListener('click', () => {
+    moveLeft();
+});
+leftArrow.addEventListener('click', () => {
+    moveLeft();
+});
+
+nextNav.addEventListener('click', () => {
+    moveRight();
+});
+rightArrow.addEventListener('click', () => {
+    moveRight();
 });
 
 updateCarousel();

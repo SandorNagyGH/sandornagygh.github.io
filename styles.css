@@ -71,8 +71,26 @@ ul {
     justify-content: center;
     margin: 1rem 0;
   }
-  .nav-arrow {
+  #arrow-box-right, #arrow-box-left {
+    position: relative;
+  }
+  #left-arrows, #right-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+  }
+  #right-arrows {
+    left: -6vw;
+  }
+  #left-arrows {
+    right: 4vw;
+    top: 1vw;
+  }
+  #left-arrow, #right-arrow {
     font-size: 2rem;
+    color: white;
+    cursor: pointer;
   }
   .nav-img {
     width: 10vw;
@@ -84,6 +102,14 @@ ul {
   }
   .nav-img:hover {
     opacity: 1;
+  }
+  .side-img {
+    width: 5vw;
+    height: 3vw;
+    object-fit: cover;
+    margin: 0 10px;
+    opacity: 0.25;
+    margin: 0 2vw;
   }
   .carousel-content {
     text-align: center;
