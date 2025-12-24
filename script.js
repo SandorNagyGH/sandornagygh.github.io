@@ -18,8 +18,6 @@ const projectLink = document.getElementById('project-link');
 const qrImg = document.getElementById('qr-img');
 const prevNav = document.querySelector('.prev-nav');
 const nextNav = document.querySelector('.next-nav');
-const leftArrow = document.getElementById('left-arrow');
-const rightArrow = document.getElementById('right-arrow');
 const leftNav = document.querySelector('.left-nav');
 const rightNav = document.querySelector('.right-nav');
 
@@ -71,19 +69,19 @@ function moveRight(){
     ], { duration: 500 });
     nextNav.animate([
         { transform: 'translateX(0) scale(1)',  },
-        { transform: 'translateX(14vw) scale(0.5)', opacity: 0.25 }
+        { transform: 'translateX(12vw) scale(0.5)', opacity: 0.25 }
     ], { duration: 500 });
     projectImg.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 1 },
-        { transform: 'translateX(36vw)translateY(25px) scale(0.2)', opacity: 0.5 }
+        { transform: 'translateX(35vw)translateY(25px) scale(0.2)', opacity: 0.5 }
     ], { duration: 500 });
     prevNav.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(36vw)translateY(-30px) scale(5)', opacity: 1 }
+        { transform: 'translateX(35vw)translateY(-30px) scale(5)', opacity: 1 }
     ], { duration: 500 });
     leftNav.animate([
         { transform: 'translateX(0) scale(1)', opacity: 0.25 },
-        { transform: 'translateX(14vw) scale(2)', opacity: 0.5 }
+        { transform: 'translateX(12vw) scale(2)', opacity: 0.5 }
     ], { duration: 500 });
     setTimeout(() => {
         qrImg.animate([
@@ -107,19 +105,19 @@ function moveLeft(){
     ], { duration: 500});
     prevNav.animate([
         { transform: 'translateX(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(-14vw) scale(0.5)', opacity: 0.25 }
+        { transform: 'translateX(-12vw) scale(0.5)', opacity: 0.25 }
     ], { duration: 500 });
     projectImg.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 1 },
-        { transform: 'translateX(-36vw)translateY(25px) scale(0.2)', opacity: 0.5 }
+        { transform: 'translateX(-35vw)translateY(25px) scale(0.2)', opacity: 0.5 }
     ], { duration: 500 });
     nextNav.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(-36vw)translateY(-30px) scale(5)', opacity: 1 }
+        { transform: 'translateX(-35vw)translateY(-30px) scale(5)', opacity: 1 }
     ], { duration: 500});
     rightNav.animate([
         { transform: 'translateX(0) scale(1)', opacity: 0.25 },
-        { transform: 'translateX(-14vw) scale(2)', opacity: 0.5 }
+        { transform: 'translateX(-12vw) scale(2)', opacity: 0.5 }
     ], { duration: 500});
     setTimeout(() => {
         qrImg.animate([
@@ -139,14 +137,7 @@ function moveLeft(){
 prevNav.addEventListener('click', () => {
     moveLeft();
 });
-leftArrow.addEventListener('click', () => {
-    moveLeft();
-});
-
 nextNav.addEventListener('click', () => {
-    moveRight();
-});
-rightArrow.addEventListener('click', () => {
     moveRight();
 });
 
