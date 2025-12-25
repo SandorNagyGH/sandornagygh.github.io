@@ -73,11 +73,11 @@ function moveRight(){
     ], { duration: 500 });
     projectImg.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 1 },
-        { transform: 'translateX(35vw)translateY(25px) scale(0.2)', opacity: 0.5 }
+        { transform: 'translateX(36vw)translateY(25px) scale(0.2)', opacity: 0.5 }
     ], { duration: 500 });
     prevNav.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(35vw)translateY(-30px) scale(5)', opacity: 1 }
+        { transform: 'translateX(36vw)translateY(-25px) scale(5)', opacity: 1 }
     ], { duration: 500 });
     leftNav.animate([
         { transform: 'translateX(0) scale(1)', opacity: 0.25 },
@@ -109,11 +109,11 @@ function moveLeft(){
     ], { duration: 500 });
     projectImg.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 1 },
-        { transform: 'translateX(-35vw)translateY(25px) scale(0.2)', opacity: 0.5 }
+        { transform: 'translateX(-36vw)translateY(25px) scale(0.2)', opacity: 0.5 }
     ], { duration: 500 });
     nextNav.animate([
         { transform: 'translateX(0)translateY(0) scale(1)', opacity: 0.5 },
-        { transform: 'translateX(-35vw)translateY(-30px) scale(5)', opacity: 1 }
+        { transform: 'translateX(-36vw)translateY(-25px) scale(5)', opacity: 1 }
     ], { duration: 500});
     rightNav.animate([
         { transform: 'translateX(0) scale(1)', opacity: 0.25 },
