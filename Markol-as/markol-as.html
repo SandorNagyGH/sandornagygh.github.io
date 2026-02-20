@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Markol-ás</title>
+    <!--<link rel="stylesheet" href="markol-as-styles.css" />-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        background-color: #172f53;
+        color: white;
+      }
+      .image {
+        max-height: 100vh;
+        width: 100%;
+        padding-top: 31px;
+      }
+      nav {
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 30px;
+        width: 100%;
+        border-bottom: 1px solid lightgray;
+        background-color: #172f53;
+      }
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .longline {
+        width: 20%;
+        min-width: 138px;
+        float: left;
+        height: 30px;
+      }
+      .shortline {
+        float: left;
+        height: 30px;
+        width: 16%;
+      }
+      ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 7px 6px;
+        text-decoration: none;
+        font-size: 14px;
+        transition: 0.5s;
+      }
+      ul.topnav li a:hover:not(.active) {
+        background-color: #c9e4ee;
+        color: #172f53;
+      }
+      ul.topnav li a.active {
+        background-color: #c9e4ee;
+        color: #172f53;
+        cursor: default;
+      }
+      .social-link {
+        text-align: center;
+        padding-bottom: 50px;
+      }
+      .fb-logo {
+        height: 55px;
+        border-radius: 11px;
+        transition: transform 0.5s ease-out;
+      }
+      .fb-logo:hover {
+        transform: translateY(8px);
+      }
+      .emoji {
+        width: 20%;
+        font-size: 30px;
+        text-align: center;
+        float: left;
+      }
+      .divider {
+        float: left;
+        height: 2px;
+        width: 100%;
+        background-color: gray;
+      }
+      .wpLink {
+        width: 46%;
+        float: left;
+      }
+      .playpause {
+        color: white;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 30px;
+        width: 8%;
+        float: left;
+        border-radius: 10px;
+        transition: transform 0.5s ease-out;
+      }
+      .playpause:hover {
+        transform: translateY(6px);
+        background-color: #2222bb;
+      }
+        .current-date {
+        width: 40%;
+        text-align: right;
+        float: left;
+      }
+      @media screen and (max-width: 660px) {
+        ul.topnav li {
+          float: none;
+          width: 100%;
+          background-color: #172f53; 
+          border-bottom: 1px solid lightgray;}
+        .image{
+          padding-top: 180px;
+          padding-bottom: 50px;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <ul class="topnav">
+          <li class="shortline">
+              <a class="active" href="">MARKOL-ÁS</a>
+          </li>
+          <li class="shortline">
+            <a href="https://markol-as.hu/rolunk/">RÓLUNK</a>
+          </li class="shortline">
+          <li class="longline">
+            <a href="https://markol-as.hu/gepi-foldmunka/">GÉPI FÖLDMUNKA</a>
+          </li>
+          <li class="shortline">
+            <a href="https://markol-as.hu/referenciak/">REFERENCIÁK</a>
+          </li>
+          <li class="shortline">
+            <a href="https://markol-as.hu/ajanlatkeres/">AJÁNLATKÉRÉS</a>
+          </li>
+          <li class="shortline">
+            <a href="https://markol-as.hu/elerhetoseg/">ELÉRHETŐSÉG</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <div>
+        <img class="image" src="https://markol-as.hu/tartalom/uploads/2019/12/cropped-Markolas-2-1.jpg">
+      </div>
+      <div class="social-link">
+        <h2>Schmél Nándor</h2>
+        <p>Nehézgépkezelő</p>
+        <h2>06-20/260-39-60</h2>
+        <p><a href="mailto:info@markol-as.hu">info@markol-as.hu</a></p>
+        <a target="_blank" href="https://www.facebook.com/MarkolasVadkert?ref=embed_page">
+          <img class="fb-logo" alt="Facebook" src="facebook-logo1.jpg">
+        </a>
+      </div>
+      <div class="emoji">&#x1F477</div>
+      <div class="emoji">🚧</div>
+      <div class="emoji">&#x1F477</div>
+      <div class="emoji">🚧</div>
+      <div class="emoji">&#x1F477</div>
+      <div class="divider"></div>
+      <div class="divider"></div>
+      <p class="wpLink"><a href="http://hu.wordpress.org/">Proudly powered by WordPress</a></p>
+      <button id="playPauseBTN" class="playpause">&#9205</button>
+      <audio id="audio" autoplay="autoplay">
+        <source src="x.mp3" type="audio/mpeg" />
+      </audio>
+      <p id="current-date" class="current-date"></p>
+    </main>
+    <script>
+      var audio=document.getElementById("audio");
+      var playPauseBTN=document.getElementById("playPauseBTN");
+      var count = 0;
+      function playPause(){
+        if(count==0){
+          count=1;
+          audio.play();
+          playPauseBTN.innerHTML="&#9208";
+        } else {
+          count=0;
+          audio.pause();
+          playPauseBTN.innerHTML="&#9205";
+        }
+      }
+      playPauseBTN.addEventListener("click", playPause);
+      const currentDateParagraph = document.getElementById("current-date");
+      const date = new Date();
+      const day = date.getDate();
+      const month = date.getMonth() + 1;
+      const year = date.getFullYear();
+      currentDateParagraph.textContent = `${year}-${month}-${day}`;
+    </script>
+  </body>
+<!--Created by Sandor Nagy-->
+</html>
