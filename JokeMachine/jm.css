@@ -22,7 +22,7 @@ body {
   height: 100vh;
 }
 .footer {
-  width: 450px;
+  width: 500px;
   text-align: center;
   display: block;
   margin: 15px auto 30px auto;
@@ -55,7 +55,7 @@ body {
     font-size: 1em;
   }
   .buttons {
-    width: 450px;
+    width: 500px;
     margin: auto;
     display: block;
     .button {
@@ -91,11 +91,16 @@ body {
   }
 }
 @media screen and (max-width: 660px) {
+  .footer {
+    width: 400px;
+  }
   #joke-box {
-    width: 90%;
+    width: 400px;
     .joke-text {
-      width: 100%;
+      width: 400px;
     }
-
+      .buttons {
+        width: 400px;
+      }
   }
 }
