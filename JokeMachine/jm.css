@@ -107,11 +107,26 @@ body {
 }
 @media screen and (max-width: 750px) {
   .footer {
+    width: 400px;
+  }
+  #joke-box {
+    width: 400px;
+    padding: 20px;
+    .joke-text {
+      width: 400px;
+    }
+      .buttons {
+        width: 400px;
+      }
+  }
+}
+@media screen and (max-width: 420px) {
+  .footer {
     width: 360px;
   }
   #joke-box {
     width: 360px;
-    padding: 20px;
+    padding: 15px;
     .joke-text {
       width: 360px;
     }
