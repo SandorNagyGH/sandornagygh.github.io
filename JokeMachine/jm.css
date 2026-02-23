@@ -90,17 +90,17 @@ body {
     }
   }
 }
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 520px) {
   .footer {
-    width: 400px;
+    width: 380px;
   }
   #joke-box {
-    width: 400px;
+    width: 380px;
     .joke-text {
-      width: 400px;
+      width: 380px;
     }
       .buttons {
-        width: 400px;
+        width: 380px;
       }
   }
 }
