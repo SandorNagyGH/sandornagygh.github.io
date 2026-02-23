@@ -38,17 +38,13 @@ body {
   border-radius: 3px;
   position: relative;
   margin:8% auto auto auto;
-  width: 450px;
+  width: 500px;
   padding: 40px 50px;
   display: table;
   background-color: #fff;
   .joke-text {
-    i {
-      font-size: 1em;
-      margin-right: 0.4em;
-    }
     text-align: center;
-    width: 450px;
+    width: 500px;
     height: auto;
     clear: both;
     font-weight: 500;
@@ -95,5 +91,11 @@ body {
   }
 }
 @media screen and (max-width: 660px) {
+  #joke-box {
+    width: 90%;
+    .joke-text {
+      width: 100%;
+    }
 
+  }
 }
