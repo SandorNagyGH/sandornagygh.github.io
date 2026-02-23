@@ -92,16 +92,17 @@ body {
 }
 @media screen and (max-width: 520px) {
   .footer {
-    width: 380px;
+    width: 360px;
   }
   #joke-box {
     display: flexbox;
-    width: 380px;
+    width: 360px;
+    padding: 20px;
     .joke-text {
-      width: 380px;
+      width: 360px;
     }
       .buttons {
-        width: 380px;
+        width: 360px;
       }
   }
 }
