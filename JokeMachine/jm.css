@@ -94,3 +94,28 @@ body {
     }
   }
 }
+@media screen and (max-width: 660px) {
+  #joke-box {
+    width: 90vw;
+    .joke-text {
+      font-size: 1.25em;
+    }
+    .joke-text {
+      width: 90vw;
+    }
+    .buttons {
+      .button {
+        &#tweet-joke,
+        &#tumblr-joke {
+          width: 30px;
+          height: 30px;
+          padding-top: 6px;
+          font-size: 1em;
+        }
+        &#new-joke {
+          padding: 8px 18px 6px 18px;
+        }
+      }
+    }
+  }
+}
