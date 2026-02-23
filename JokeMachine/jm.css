@@ -95,6 +95,7 @@ body {
     width: 380px;
   }
   #joke-box {
+    display: flexbox;
     width: 380px;
     .joke-text {
       width: 380px;
