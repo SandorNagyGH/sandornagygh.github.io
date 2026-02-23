@@ -40,7 +40,7 @@ body {
   margin:8% auto auto auto;
   width: 600px;
   padding: 40px 50px;
-  display: grid;
+  display: table;
   background-color: #fff;
   .joke-text {
     text-align: center;
@@ -95,6 +95,7 @@ body {
     width: 500px;
   }
   #joke-box {
+    display: flexbox;
     width: 500px;
     padding: 30px;
     .joke-text {
@@ -110,6 +111,7 @@ body {
     width: 400px;
   }
   #joke-box {
+    display: flexbox;
     width: 400px;
     padding: 20px;
     .joke-text {
@@ -125,6 +127,7 @@ body {
     width: 360px;
   }
   #joke-box {
+    display: flexbox;
     width: 360px;
     padding: 15px;
     .joke-text {
