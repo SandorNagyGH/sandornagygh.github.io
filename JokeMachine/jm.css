@@ -35,13 +35,16 @@ body {
     -webkit-text-decoration-skip: objects;
   }
 }
+#wrapper {
+  background-color: #333;
+}
 #joke-box {
   border-radius: 3px;
   position: relative;
   margin:8% auto auto auto;
   width: 600px;
   padding: 40px 50px;
-  display: table;
+  display: inline-block;
   background-color: #fff;
   .joke-text {
     text-align: center;
