@@ -32,6 +32,7 @@ body {
     font-weight: 500;
     text-decoration: none;
     color: #fff;
+    -webkit-text-decoration-skip: objects;
   }
 }
 #joke-box {
@@ -95,9 +96,8 @@ body {
     width: 500px;
   }
   #joke-box {
-    display: flexbox;
     width: 500px;
-    padding: 30px;
+    padding: 40px;
     .joke-text {
       width: 500px;
     }
@@ -111,9 +111,9 @@ body {
     width: 400px;
   }
   #joke-box {
-    display: flexbox;
+    display: -moz-box;
     width: 400px;
-    padding: 20px;
+    padding: 40px 20px;
     .joke-text {
       width: 400px;
     }
@@ -127,9 +127,8 @@ body {
     width: 360px;
   }
   #joke-box {
-    display: flexbox;
     width: 360px;
-    padding: 15px;
+    padding: 40px 15px;
     .joke-text {
       width: 360px;
     }
