@@ -1,33 +1,43 @@
-<link rel="stylesheet" href="jm.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-<div id="wrapper">
-  <div id="joke-box">
-    <div class="joke-text">
-      <span id="text"></span>
-      <p id="punchline"></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Joke Machine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="jm.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="joke-box">
+        <div class="joke-text">
+          <span id="text"></span>
+          <p id="punchline"></p>
+        </div>
+        <div class="buttons">
+          <a
+            class="button"
+            id="tweet-joke"
+            title="Tweet this joke!"
+            target="_top"
+          >
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a
+            class="button"
+            id="tumblr-joke"
+            title="Post this joke on tumblr!"
+            target="_blank"
+          >
+            <i class="fa fa-tumblr"></i>
+          </a>
+          <button class="button" id="new-joke">New joke</button>
+        </div>
+      </div>
+      <div class="footer">by <a href="https://sandornagygh.github.io/">alex</a></div>
     </div>
-    <div class="buttons">
-      <a
-        class="button"
-        id="tweet-joke"
-        title="Tweet this joke!"
-        target="_top"
-      >
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a
-        class="button"
-        id="tumblr-joke"
-        title="Post this joke on tumblr!"
-        target="_blank"
-      >
-        <i class="fa fa-tumblr"></i>
-      </a>
-      <button class="button" id="new-joke">New joke</button>
-    </div>
-  </div>
-  <div class="footer">by <a href="https://sandornagygh.github.io/">alex</a></div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
-<script src="jm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js"></script>
+    <script src="jm.js"></script>
+  </body>
+</html>
