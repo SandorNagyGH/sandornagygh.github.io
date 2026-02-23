@@ -22,7 +22,7 @@ body {
   height: 100vh;
 }
 .footer {
-  width: 500px;
+  width: 600px;
   text-align: center;
   display: block;
   margin: 15px auto 30px auto;
@@ -38,13 +38,13 @@ body {
   border-radius: 3px;
   position: relative;
   margin:8% auto auto auto;
-  width: 500px;
+  width: 600px;
   padding: 40px 50px;
   display: grid;
   background-color: #fff;
   .joke-text {
     text-align: center;
-    width: 500px;
+    width: 600px;
     height: auto;
     clear: both;
     font-weight: 500;
@@ -55,7 +55,7 @@ body {
     font-size: 1em;
   }
   .buttons {
-    width: 500px;
+    width: 600px;
     margin: auto;
     display: block;
     .button {
@@ -90,7 +90,22 @@ body {
     }
   }
 }
-@media screen and (max-width: 520px) {
+@media screen and (max-width: 1500px) {
+  .footer {
+    width: 500px;
+  }
+  #joke-box {
+    width: 500px;
+    padding: 30px;
+    .joke-text {
+      width: 500px;
+    }
+      .buttons {
+        width: 500px;
+      }
+  }
+}
+@media screen and (max-width: 750px) {
   .footer {
     width: 360px;
   }
