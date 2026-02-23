@@ -97,7 +97,7 @@ body {
   #joke-box {
     display: flexbox;
     width: 360px;
-    padding: 20px;
+    padding: 20px 25px;
     .joke-text {
       width: 360px;
     }
@@ -105,4 +105,5 @@ body {
         width: 360px;
       }
   }
+
 }
