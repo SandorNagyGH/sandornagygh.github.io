@@ -91,7 +91,8 @@
     },
     {
         "id": 19,
-        "joke": "5 out of 6 people say that russian rulette is safe."
+        "joke": "5 out of 6 people say that russian rulette is safe.",
+        "punchline": ""
     },
     {
         "id": 20,
@@ -155,15 +156,18 @@
     },
     {
         "id": 32,
-        "joke": "I'm sweating like a dog in an asian restaurant!"
+        "joke": "I'm sweating like a dog in an asian restaurant!",
+        "punchline": ""
     },
     {
         "id": 33,
-        "joke": "I'm sweating like a blind lesbian in a fish market!"
+        "joke": "I'm sweating like a blind lesbian in a fish market!",
+        "punchline": ""
     },
     {
         "id": 34,
-        "joke": "I'm sweating like the last cucumber in a female prison!"
+        "joke": "I'm sweating like the last cucumber in a female prison!",
+        "punchline": ""
     },
     {
         "id": 35,
@@ -187,7 +191,8 @@
     },
     {
         "id": 39,
-        "joke": "Someone said you sound like an owl!"
+        "joke": "Someone said you sound like an owl!",
+        "punchline": ""
     },
     {
         "id": 40,
@@ -231,13 +236,13 @@
     },
     {
         "id": 48,
-        "joke": "Why did the cookie go to the doctor?",
-        "punchline": "Because it was feeling crumbly!"
+        "joke": "Your mom is so fat, they measure her wasteline with a satelite!",
+        "punchline": "Your mom's mouth is so big, it has its own zip code!"
     },
     {
         "id": 49,
-        "joke": "What do you call a bear with no teeth?",
-        "punchline": "A gummy bear!"
+        "joke": "Your mom's mouth is so big, she uses jumpropes for flossing!",
+        "punchline": ""
     },
     {
         "id": 50,
