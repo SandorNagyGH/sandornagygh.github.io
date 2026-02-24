@@ -35,16 +35,12 @@ body {
     -webkit-text-decoration-skip: objects;
   }
 }
-#wrapper {
-  background-color: #333;
-}
 #joke-box {
   border-radius: 3px;
   position: relative;
-  margin:8% auto auto auto;
   width: 600px;
   padding: 40px 50px;
-  display: inline-block;
+  display: table;
   background-color: #fff;
   .joke-text {
     text-align: center;
@@ -78,7 +74,8 @@ body {
         opacity: 0.9;
       }
       &#tweet-joke,
-      &#tumblr-joke {
+      &#tumblr-joke,
+      &#facebook-joke {
         float: left;
         padding: 0px;
         padding-top: 8px;

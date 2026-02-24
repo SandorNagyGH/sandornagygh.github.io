@@ -49,17 +49,28 @@ function getJoke() {
   currentJoke = randomJoke.joke;
   currentPunchline = randomJoke.punchline;
 
+  var encodedJoke = encodeURIComponent(currentJoke);
+
+  const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodedJoke}`;
+
+  //window.open(shareUrl, '_blank', 'width=600,height=400');
+  $('#facebook-joke').attr(
+    'href',
+    shareUrl +
+    encodedJoke
+  );
+
   $('#tweet-joke').attr(
     'href',
     'https://twitter.com/intent/tweet?hashtags=jokes&related=freecodecamp&text=' +
-      encodeURIComponent(currentJoke )
+     encodedJoke
   );
 
   $('#tumblr-joke').attr(
     'href',
     'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=jokes,freecodecamp&caption=' +
       '&content=' +
-      encodeURIComponent(currentJoke) +
+      encodedJoke +
       '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button'
   );
 
