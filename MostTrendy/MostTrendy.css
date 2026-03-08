@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+h1, h2 {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    text-align: center;
+}
+h1 {
+    padding: 25px 0;
+}
+h2 {
+    padding: 10px 0;
+}
+p, ul {
+    font-family: 'Verdana', sans-serif;
+    line-height: 1.6;
+}
+P {
+    padding: 5px 10vw;
+}
+ul {
+    padding: 15px 15vw;
+}
+.a {
+  background: radial-gradient(circle, yellow, orange 50%, red);
+}
+.b {
+  background: radial-gradient(circle, yellow, orange, red 25vw);
+}
+.c {
+    background: linear-gradient(to right, yellow, orange, red);
+}
+#joke-section {
+    height: auto;
+}
+#jokebox {
+    width: 60vw;
+    height: auto;
+}
+#bubble {
+    width: 100%;
+    height: auto;
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    margin-left: 20vw;
+    .joke-text {
+        text-align: center;
+        width: auto;
+        height: auto;
+        clear: both;
+        font-weight: 500;
+        font-size: 1.75em;
+    }
+    #punchline {
+        margin-top: 20px;
+        font-size: 1em;
+    }
+}
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(50%);
+    #joker {
+        position: absolute;
+        top: -60px;
+        left: 20px;
+    }
+}
+#text,#punchline {
+    font-size: 1em;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px;
+}
+.buttons {
+    width: 600px;
+    margin: auto;
+    display: block;
+    position: absolute;
+    bottom: -50px;
+    .button {
+      height: 32px;
+      border: none;
+      border-radius: 3px;
+      background-color: #0037c1;
+      outline: none;
+      font-size: 0.85em;
+      padding: 8px 18px 6px 18px;
+      margin-top: 30px;
+      opacity: 1;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.6;
+      }
+      &#x-joke,
+      &#facebook-joke {
+        float: left;
+        padding: 0;
+        text-align: center;
+        font-size: 1.2em;
+        margin-right: 5px;
+        height: 32px;
+        width: 32px;
+      }
+      &#x-joke {
+        background-color: white;
+        display: flex;
+        align-items: center;
+      }
+    }
+}
+#filler {
+    height: 70px;
+}
+.hover-container {
+    position: relative;
+    display: inline-block;
+}
+.hover-container img {
+    display: none;
+    position: absolute;
+    top: 25px; /* Position below the link */
+    left: 25px;
+    width: 200px;
+    border: 2px solid #ccc;
+    background: white;
+    z-index: 10;
+}
+.hover-container:hover img {
+    display: block;
+}
