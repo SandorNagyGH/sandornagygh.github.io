@@ -6,7 +6,8 @@ const projects = [
     { img: "https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png", name: "Random quoteMachine", link: "#" },
     { img: "https://i.postimg.cc/ncHC0xkh/Wordle_Solver.jpg", name: "Wordle Solver", link: "./WordleSolver/wordleSolver.html", qr:"https://i.postimg.cc/5Nnjrr7V/Wordle_Solver_Qr.png" },
     { img: "https://i.postimg.cc/659yYK0K/Drum_Machine.png", name: "Drum Machine", link: "./DrumMachine/DrumMachine.html", qr:"https://i.postimg.cc/ncHC0xkt/Drum_Machine_Qr.png" },
-    
+    { img: "https://i.postimg.cc/266BNLHX/Most_Trendy.jpg", name: "Most Trendy", link: "./MostTrendy/MostTrendy.html", qr:"https://i.postimg.cc/zfpRQFk2/Most_Trendy_QR.png" },
+    { img: "https://i.postimg.cc/K81GbrFt/Markol_as.jpg", name: "Markol-as", link: "./Markol-as/Markol-as1.html", qr:"https://i.postimg.cc/VkJfwB1M/Markol_as_QR.png" },
 ];
 
 let currentIndex = 0;
