@@ -26,7 +26,7 @@ function getJokes() {
       Accept: 'application/json'
     },
     url:
-      'https://raw.githubusercontent.com/SandorNagyGH/sandornagygh.github.io/refs/heads/main/JokeMachine/jokes.json',
+      'https://raw.githubusercontent.com/SandorNagyGH/sandornagygh.github.io/refs/heads/main/jokes.json',
     success: function (jsonJokes) {
       if (typeof jsonJokes === 'string') {
         jokesData = JSON.parse(jsonJokes);
