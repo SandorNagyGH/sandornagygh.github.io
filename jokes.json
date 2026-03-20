@@ -146,8 +146,8 @@
     },
     {
         "id": 30,
-        "joke": "How do you call a fly without wings? A walk! How do you call a cow without legs? Ground beef! How do you call a fish without eyes? Fsh! How do you call a deer without eyes? No idea! (No-eye-deer) ",
-        "punchline": "How do you call a deer without eyes and legs? Still no idea! How do you call a deer without eyes, legs or genitals? Still no f**cking idea! How do you call a dog without legs? It doesn't matter, it won't come anyway!"
+        "joke": "How do you call a cow without legs? Ground beef! How do you call a deer without eyes? No idea! (No-eye-deer) ",
+        "punchline": "How do you call a deer without eyes and legs? Still no idea! How do you call a deer without eyes, legs or genitals? Still no f**cking idea!"
     },
     {
         "id": 31,
@@ -246,7 +246,22 @@
     },
     {
         "id": 50,
-        "joke": "Why did the bicycle fall over?",
-        "punchline": "It was two-tired!"
+        "joke": "What does the elephant ask from the naked man?",
+        "punchline": "How do you breath through that thing?"
+    },
+    {
+        "id": 51,
+        "joke": "How do you call a fly without wings? A walk! How do you call a fish without eyes? Fsh!",
+        "punchline": "How do you call a dog without legs? It doesn't matter, it won't come anyway!"
+    },
+    {
+        "id": 52,
+        "joke": "What do you call a cow with two legs?",
+        "punchline": "Your mom!"
+    },
+    {
+        "id": 53,
+        "joke": "What kind of meat a vegetarian priest eat?",
+        "punchline": "Nun!"
     }
 ]
