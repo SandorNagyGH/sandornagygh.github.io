@@ -1,12 +1,13 @@
 const projects = [
-    { img: "https://i.postimg.cc/yYVkvKPB/Crcl.jpg", name: "CRCL", link: "https://sandornagygh.github.io/crcl/crcl.html", qr:"https://i.postimg.cc/SNyJD4rh/Crcl_QR.jpg" },
-    { img: "https://i.postimg.cc/659yYK0W/Wordle.jpg", name: "Wordle Game", link: "./WordleByAlex/WordleByAlex.html", qr:"https://i.postimg.cc/28zV2Ywj/Wordle_Qr.png" },
+    { img: "https://i.postimg.cc/yY01wwq8/Screenshot-Tablet1.png", name: "Android Chess Clock App", link: "https://play.google.com/store/apps/details?id=com.sandor.chessclockapp&pcampaignid=web_share" },
+    { img: "https://i.postimg.cc/yYVkvKPB/Crcl.jpg", name: "CRCL", link: "https://sandornagygh.github.io/crcl/crcl.html", qr:"https://i.postimg.cc/JnGxBZw2/Crcl.png" },
+    { img: "https://i.postimg.cc/659yYK0W/Wordle.jpg", name: "Wordle Game", link: "./WordleByAlex/WordleByAlex.html", qr:"https://i.postimg.cc/kGPSXb7G/Wordle-Qr.png" },
     { img: "https://i.postimg.cc/rF8KQTJ8/Usa_Population.png", name: "Choropleth map of Usa", link: "./UsaPopulation/UsaPopulation.html", qr:"https://i.postimg.cc/KvZRJbNx/Usa_Qr.png" },
     { img: "https://i.postimg.cc/ry0HKXBz/Magyar-Wordle-Image.png", name: "Magyar Wordle", link: "./MagyarWordle/MagyarWordle.html" },
     { img: "https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png", name: "Random quoteMachine", link: "#" },
-    { img: "https://i.postimg.cc/ncHC0xkh/Wordle_Solver.jpg", name: "Wordle Solver", link: "./WordleSolver/wordleSolver.html", qr:"https://i.postimg.cc/5Nnjrr7V/Wordle_Solver_Qr.png" },
+    { img: "https://i.postimg.cc/ncHC0xkh/Wordle_Solver.jpg", name: "Wordle Solver", link: "./WordleSolver/wordleSolver.html", qr:"https://i.postimg.cc/90yGGBxh/Wordle-Solver-Qr.png" },
     { img: "https://i.postimg.cc/659yYK0K/Drum_Machine.png", name: "Drum Machine", link: "./DrumMachine/DrumMachine.html", qr:"https://i.postimg.cc/ncHC0xkt/Drum_Machine_Qr.png" },
-    { img: "https://i.postimg.cc/266BNLHX/Most_Trendy.jpg", name: "Most Trendy", link: "./MostTrendy/MostTrendy.html", qr:"https://i.postimg.cc/zfpRQFk2/Most_Trendy_QR.png" },
+    { img: "https://i.postimg.cc/266BNLHX/Most_Trendy.jpg", name: "Most Trendy", link: "./MostTrendy/MostTrendy.html", qr:"https://i.postimg.cc/RCbr8LVM/Most-Trendy-Qr.png" },
     { img: "https://i.postimg.cc/K81GbrFt/Markol_as.jpg", name: "Markol-as", link: "./Markol-as/markol-as.html", qr:"https://i.postimg.cc/y6ZZyfPw/Markol-as-QR.jpg" },
 ];
 
