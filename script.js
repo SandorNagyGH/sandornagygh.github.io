@@ -1,5 +1,8 @@
 const projects = [
-    { img: "https://i.postimg.cc/yY01wwq8/Screenshot-Tablet1.png", name: "Android Chess Clock App", link: "https://play.google.com/store/apps/details?id=com.sandor.chessclockapp&pcampaignid=web_share", qr="https://i.postimg.cc/gcMRRmDq/qr-Chess-Clock.png" },
+    { img: "https://i.postimg.cc/yY01wwq8/Screenshot-Tablet1.png", 
+         name: "Android Chess Clock App", 
+         link: "https://play.google.com/store/apps/details?id=com.sandor.chessclockapp&pcampaignid=web_share", 
+         qr="https://i.postimg.cc/gcMRRmDq/qr-Chess-Clock.png" },
     { img: "https://i.postimg.cc/yYVkvKPB/Crcl.jpg", name: "CRCL", link: "https://sandornagygh.github.io/crcl/crcl.html", qr:"https://i.postimg.cc/JnGxBZw2/Crcl.png" },
     { img: "https://i.postimg.cc/659yYK0W/Wordle.jpg", name: "Wordle Game", link: "./WordleByAlex/WordleByAlex.html", qr:"https://i.postimg.cc/kGPSXb7G/Wordle-Qr.png" },
     { img: "https://i.postimg.cc/rF8KQTJ8/Usa_Population.png", name: "Choropleth map of Usa", link: "./UsaPopulation/UsaPopulation.html", qr:"https://i.postimg.cc/KvZRJbNx/Usa_Qr.png" },
