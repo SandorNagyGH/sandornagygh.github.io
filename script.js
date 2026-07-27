@@ -28,9 +28,14 @@ function updateCarousel() {
         projectImg.src = projects[currentIndex].img;
         projectName.textContent = projects[currentIndex].name;
         projectLink.href = projects[currentIndex].link;
-        qrImg.src = projects[currentIndex].qr || '';
+        if (projects[currentIndex].qr) {
+            qrImg.src = projects[currentIndex].qr;
+            qrImg.style.display = "block";
+        } else {
+            qrImg.style.display = "none";
+        }
         
-        if(direction == 'next'){ 
+        if(direction === 'next'){ 
             setTimeout(() => {
                 qrImg.animate([
                 { transform: 'translateX(-50vw)',opacity: 0},
@@ -38,7 +43,7 @@ function updateCarousel() {
             ], { duration: 250, fill: 'forwards' });
             }, 500);
         }
-        if(direction == 'prev'){
+        if(direction === 'prev'){
             setTimeout(() => {
                 qrImg.animate([
                     { transform: 'translateX(50vw)',opacity: 0 },
@@ -93,11 +98,7 @@ function moveRight(){
     }, 300);
 
     direction = 'next';
-    if(currentIndex == 0){
-        currentIndex = projects.length - 1;
-    } else {
-        currentIndex = currentIndex - 1;
-    }
+    currentIndex = (currentIndex - 1 + projects.length) % projects.length;
     updateCarousel();
 }
 function moveLeft(){
