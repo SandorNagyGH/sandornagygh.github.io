@@ -11,7 +11,7 @@ const projects = [
     { img: "https://i.postimg.cc/ncHC0xkh/Wordle_Solver.jpg", name: "Wordle Solver", link: "https://sandornagygh.github.io/WordleSolver/wordleSolver.html", qr:"https://i.postimg.cc/90yGGBxh/Wordle-Solver-Qr.png" },
     { img: "https://i.postimg.cc/266BNLHX/Most_Trendy.jpg", name: "Most Trendy", link: "https://sandornagygh.github.io/MostTrendy/MostTrendy.html", qr:"https://i.postimg.cc/RCbr8LVM/Most-Trendy-Qr.png" },
     { img: "https://i.postimg.cc/659yYK0K/Drum_Machine.png", name: "Drum Machine", link: "https://sandornagygh.github.io/DrumMachine/DrumMachine.html", qr:"https://i.postimg.cc/ncHC0xkt/Drum_Machine_Qr.png" },
-    { img: "https://i.postimg.cc/K81GbrFt/Markol_as.jpg", name: "Markol-as", link: "https://sandornagygh.github.io/Markol-as/markol-as.html", qr:"https://i.postimg.cc/y6ZZyfPw/Markol-as-QR.jpg" },
+    { img: "https://i.postimg.cc/K81GbrFt/Markol_as.jpg", name: "Markol-as", link: "https://sandornagygh.github.io/Markol-as/markol-as.html", qr:"https://i.postimg.cc/QCPMNLJX/Markol-as-Qr.png" },
     
 ];
 
