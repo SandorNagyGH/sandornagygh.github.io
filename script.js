@@ -22,6 +22,7 @@ const projects = [
 
 let currentIndex = 0;
 let direction = '';
+let qrAnimationTimeout = null;
 
 const projectImg = document.getElementById('current-project-img');
 const projectName = document.getElementById('project-name');
@@ -32,52 +33,69 @@ const nextNav = document.querySelector('.next-nav');
 const leftNav = document.querySelector('.left-nav');
 const rightNav = document.querySelector('.right-nav');
 
+
 function updateCarousel() {
-    setTimeout(() => {
-        projectImg.src = projects[currentIndex].img;
-        projectName.textContent = projects[currentIndex].name;
-        projectLink.href = projects[currentIndex].link;
-        if (projects[currentIndex].qr) {
-            qrImg.src = projects[currentIndex].qr;
-            qrImg.style.display = "block";
-        } else {
-            qrImg.style.display = "none";
-        }
-        
-        if(direction === 'next'){ 
-            setTimeout(() => {
-                qrImg.animate([
-                { transform: 'translateX(-50vw)',opacity: 0},
-                { transform: 'translateX(0)',opacity: 1}
-            ], { duration: 250, fill: 'forwards' });
-            }, 500);
-        }
-        if(direction === 'prev'){
-            setTimeout(() => {
-                qrImg.animate([
-                    { transform: 'translateX(50vw)',opacity: 0 },
-                    { transform: 'translateX(0)',opacity: 1 }
-                ], { duration: 250, fill: 'forwards' });
-            }, 500);
-        }
+    if (qrAnimationTimeout !== null) {
+        clearTimeout(qrAnimationTimeout);
+        qrAnimationTimeout = null;
+    }
+    if(direction === 'next'){
+        qrAnimationTimeout = setTimeout(() => {
+            qrImg.animate([
+                    { transform: 'translateX(-50vw)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 }
+            ], {
+                duration: 250,
+                fill: 'forwards'
+            });
 
-        const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
-        prevNav.src = projects[prevIndex].img;
-        prevNav.setAttribute('data-index', prevIndex);
+            qrAnimationTimeout = null;
 
-        const leftIndex = (currentIndex - 2 + projects.length) % projects.length;
-        leftNav.src = projects[leftIndex].img;
-        leftNav.setAttribute('data-index', leftIndex);
+        }, 500);
+    }
+    if(direction === 'prev'){
+        qrAnimationTimeout = setTimeout(() => {
+            qrImg.animate([
+                    { transform: 'translateX(50vw)', opacity: 0 },
+                    { transform: 'translateX(0)', opacity: 1 }
+            ], {
+                duration: 250,
+                fill: 'forwards'
+            });
 
-        const nextIndex = (currentIndex + 1) % projects.length;
-        nextNav.src = projects[nextIndex].img;
-        nextNav.setAttribute('data-index', nextIndex);
+            qrAnimationTimeout = null;
 
-        const rightIndex = (currentIndex + 2) % projects.length;
-        rightNav.src = projects[rightIndex].img;
-        rightNav.setAttribute('data-index', rightIndex);
-    }, 500);
+        }, 500);
+    }
+    projectImg.src = projects[currentIndex].img;
+    projectName.textContent = projects[currentIndex].name;
+    projectLink.href = projects[currentIndex].link;
+    if (projects[currentIndex].qr) {
+        qrImg.src = projects[currentIndex].qr;
+        qrImg.style.display = "block";
+    } else {
+         qrImg.style.display = "none";
+    }
+
+    const prevIndex = (currentIndex - 1 + projects.length) % projects.length;
+    prevNav.src = projects[prevIndex].img;
+    prevNav.setAttribute('data-index', prevIndex);
+
+    const leftIndex = (currentIndex - 2 + projects.length) % projects.length;
+    leftNav.src = projects[leftIndex].img;
+    leftNav.setAttribute('data-index', leftIndex);
+
+    const nextIndex = (currentIndex + 1) % projects.length;
+    nextNav.src = projects[nextIndex].img;
+    nextNav.setAttribute('data-index', nextIndex);
+
+    const rightIndex = (currentIndex + 2) % projects.length;
+    rightNav.src = projects[rightIndex].img;
+    rightNav.setAttribute('data-index', rightIndex);
+
+    enableNavigation();
 }
+
 function moveRight(){
     rightNav.animate([
         { transform: 'translateX(0)' },
@@ -108,7 +126,9 @@ function moveRight(){
 
     direction = 'next';
     currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-    updateCarousel();
+    setTimeout(() => {
+        updateCarousel();
+    }, 500);
 }
 function moveLeft(){
     leftNav.animate([
@@ -144,16 +164,30 @@ function moveLeft(){
     } else {
         currentIndex = currentIndex + 1;
     }
-    updateCarousel();
+    setTimeout(() => {
+        updateCarousel();
+    }, 500);
 }
+
+function disableNavigation() {
+    prevNav.style.pointerEvents = 'none';
+    nextNav.style.pointerEvents = 'none';
+}
+
+function enableNavigation() {
+    prevNav.style.pointerEvents = 'auto';
+    nextNav.style.pointerEvents = 'auto';
+}
+
+
 prevNav.addEventListener('click', () => {
+    disableNavigation()
     moveLeft();
 });
 nextNav.addEventListener('click', () => {
+    disableNavigation()
     moveRight();
 });
 
 
 updateCarousel();
-
-
